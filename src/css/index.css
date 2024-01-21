@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import './clash-display.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1130px;
+}
+
+/* clash display  */
+
+.light {
+ font-family: 'ClashDisplay-Light';
+}
+
+.regular {
+ font-family: 'ClashDisplay-Regular';
+}
+
+.medium {
+ font-family: 'ClashDisplay-Medium';
+}
+
+.bold {
+font-family: 'ClashDisplay-Bold';
+}
+
+.extraBold {
+font-family: 'ClashDisplay-Bold';
+font-weight: 900;
+}
+
+/* ubuntu  */
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* main  */
+
+.bg-header {
+  background-image: url("assets/bg/bg.jpg");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+background-size: cover;
+  z-index: -1;
+}
+
+.bottomShadow {
+  box-shadow: 0px 3px 2px -1px #1095C120;
+}
+
+
