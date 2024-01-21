@@ -77,4 +77,8 @@ background-size: cover;
   box-shadow: 0px 3px 2px -1px #1095C120;
 }
 
+.bgShadow {
+  box-shadow: 0px 25px 25px 5px #1095C120;
+}
+
 

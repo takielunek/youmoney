@@ -13,7 +13,7 @@ const Benefits = () => {
          {benefits.map((benefits) => (
             <div key={benefits.id} className="w-1/4 my-[36px] mx-[18px] py-[45px] px-[30px] border-2 border-white rounded-xl bottomShadow">
                 <img className="h-[186.5px]" src={benefits.image} alt="Grafika" />
-                <p className="text-[17px] text-lightGrey mt-[36px] text-center">{benefits.title}</p>
+                <p className="text-[16px] text-lightGrey mt-[36px] text-center">{benefits.title}</p>
             </div>
           ))}
            </div>
