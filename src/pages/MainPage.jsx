@@ -10,24 +10,25 @@ import Benefits from "../components/MainPage/Benefits/Benefits"
 import Answers from "../components/MainPage/Answers/Answers"
 import Footer from "../components/MainPage/Footer/Footer"
 
+
 const MainPage = () => {
   return (
     <div>
         <div className="bg-header">
            <div className="wrapper">
             <Navbar />
-            <Header />
+            {/* <Header /> */}
            </div>
         </div>
-           <HowItWorks />
-           <ThanksTo />
-           <AboutUs />
+           {/* <HowItWorks /> */}
+           {/* <ThanksTo /> */}
+           {/* <AboutUs /> */}
            <Opinions />
-           <Loan />
-           <Questions />
-           <Benefits />
-           <Answers />
-           <Footer />
+           {/* <Loan /> */}
+           {/* <Questions /> */}
+           {/* <Benefits /> */}
+           {/* <Answers /> */}
+           {/* <Footer /> */}
     </div>
   )
 }
