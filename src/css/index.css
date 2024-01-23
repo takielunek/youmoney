@@ -81,4 +81,11 @@ font-weight: 900;
   box-shadow: 0px 25px 25px 5px #1095C120;
 }
 
+.rotateX {
+  transform: rotateX(3.142rad);
+  transition-duration: 300ms;
+}
 
+.rotate {
+  transform: rotateX(0);
+}

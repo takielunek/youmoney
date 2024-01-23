@@ -5,6 +5,9 @@ import benefit1 from "./assets/benefit/benefit1.svg"
 import benefit2 from "./assets/benefit/benefit2.svg"
 import benefit3 from "./assets/benefit/benefit3.svg"
 import benefit4 from "./assets/benefit/benefit4.svg"
+import circle1 from "./assets/other/circle1.png"
+import circle2 from "./assets/other/circle2.png"
+import circle3 from "./assets/other/circle3.png"
 
 export const header = [
   {
@@ -28,18 +31,21 @@ export const itWorks = [
     image: about3,
     title: "Wypełnij bezpłatnie wniosek",
     text: "Składasz tylko jeden wniosek. To zajmie Ci kilka minut. Następnie szukamy dla Ciebie najlepszej oferty pożyczki.",
+    graphics: circle1,
   },
     {
     id: "2",
     image: about2,
     title: "Szybka propozycja oferty ",
     text: "Pierwszą propozycję oferty otrzymasz natychmiast. Wiemy jak cenny jest Twój czas.",
+    graphics: circle2,
   },
     {
     id: "3",
     image: about1,
     title: "Odbierz swoje pieniądze!",
     text: " Po zatwierdzeniu warunków, otrzymasz pieniądze prosto na Twoje konto bankowe. Bez prowizji!",
+    graphics: circle3,
   },
 ]
 

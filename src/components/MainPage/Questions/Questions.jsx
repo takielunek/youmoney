@@ -6,9 +6,9 @@ const Questions = () => {
   return (
    <section className="wrapper">
          <div className="text-center">
-              <h1 className="text-[54px] bold text-grey mt-[150px]">Najczęściej zadawane pytania</h1>
+              <h1 className="text-[30px] sm:text-[40px] md:text-[54px] bold text-grey mt-[150px]">Najczęściej zadawane pytania</h1>
          </div>
-         <div className="w-[58%] mx-auto py-[60px]">
+         <div className="w-10/12 sm:w-[58%] mx-auto py-[60px]">
            {questions.map((questions) => ( 
               <div key={questions.id} >
                  <Accordion title={questions.title} answer={questions.text} />
