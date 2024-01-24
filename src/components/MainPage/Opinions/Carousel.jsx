@@ -4,8 +4,9 @@ import carretRight from "../../../assets/other/carret-right.svg"
 
 
 const Carousel = ({children: opinions}) => {
-  const button = "border-2 border-cream rounded-full h-[32px] w-[32px]"
-
+  const button = "border-2 border-blue rounded-full h-[32px] w-[32px]"
+  const iconLeft = " h-[20px] ml-[4px]"
+  const iconRight = " h-[20px] ml-[6px] "
 
   const [curr, setCurr] = useState(0)
   const prev = () =>
@@ -14,18 +15,22 @@ const Carousel = ({children: opinions}) => {
     setCurr((curr) => (curr === opinions.length - 1 ? 0 : curr + 1))
 
   return (
-  <div className="py-[50px] px-[20px]">
-      <div className="overflow-hidden relative">
-     <div className="transition-transform ease-out duration-500 w-[60%] ml-[60px]"  style={{ transform: `translateX(-${curr * 100}%)` }}>{opinions}</div>
-     <div className="absolute inset-0 flex items-center justify-between">
-        <button onClick={prev} className={`${button}`}>
-            <img src={carretLeft} alt="" />
-        </button>
-        <button onClick={next} className={`${button}`}>
-           <img src={carretRight} alt="" />
-        </button>
-     </div>
-    </div>
+  <div className="py-[50px] w-[80%] ml-[20px]">
+           <div className="flex">
+            <div>
+                <button onClick={prev} className={`${button}`}>
+               <img className={`${iconLeft}`} src={carretLeft} alt="Icon" />
+            </button>
+            </div>
+           <div className="overflow-hidden ">
+            <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${curr * 100}%)` }}>{opinions}</div>
+           </div>
+           <div>
+            <button onClick={next} className={`${button}`}>
+                <img className={`${iconRight}`} src={carretRight} alt="Icon" />
+            </button>
+           </div>
+           </div>
   </div> 
   )
 }
