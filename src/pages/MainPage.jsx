@@ -17,18 +17,18 @@ const MainPage = () => {
         <div className="bg-header">
            <div className="wrapper">
             <Navbar />
-            {/* <Header /> */}
+            <Header />
            </div>
         </div>
-           {/* <HowItWorks /> */}
-           {/* <ThanksTo /> */}
-           {/* <AboutUs /> */}
+           <HowItWorks />
+           <ThanksTo />
+           <AboutUs />
            <Opinions />
-           {/* <Loan /> */}
-           {/* <Questions /> */}
+           <Loan />
+           <Questions />
            <Benefits />
-           {/* <Answers /> */}
-           {/* <Footer /> */}
+           <Answers />
+           <Footer />
     </div>
   )
 }
