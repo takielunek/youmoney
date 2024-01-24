@@ -16,7 +16,7 @@ export default {
         lightGrayish:"#A0A9B0",
         darkGrayish:"#24333E",
         cream: "#dadde0",
-        silver: "#f7f8f8"
+        silver: "#e4e8ec"
       },
     },
     screens: {

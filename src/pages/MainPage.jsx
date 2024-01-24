@@ -26,7 +26,7 @@ const MainPage = () => {
            <Opinions />
            {/* <Loan /> */}
            {/* <Questions /> */}
-           {/* <Benefits /> */}
+           <Benefits />
            {/* <Answers /> */}
            {/* <Footer /> */}
     </div>

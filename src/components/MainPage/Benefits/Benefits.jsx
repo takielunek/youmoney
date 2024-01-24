@@ -1,4 +1,5 @@
 import { benefits } from "../../../index.js";
+import SwiperFreemode from "./SwiperFreeMode.jsx";
 
 
 const Benefits = () => {
@@ -17,8 +18,9 @@ const Benefits = () => {
             </div>
           ))}
            </div>
+           <SwiperFreemode />
         </div>
-      </div>
+      </div> 
     </section>
   )
 }
