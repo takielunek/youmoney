@@ -12,7 +12,7 @@ const icon = "h-[12px] w-[12px] text-lightGrayish m-2"
 
   return (
     <section
-      className="pt-[50px] px-[63px] relative">
+      className="pt-[20px] md:pt-[50px] px-[63px] mb-[30px] sm:mb-0 relative">
       <div className="absolute flex inset-0 items-center justify-between">
         <div className={`${button} swiper-button-prev`}>
           <FaChevronLeft className={`${icon}`}/>
@@ -26,7 +26,6 @@ const icon = "h-[12px] w-[12px] text-lightGrayish m-2"
           grid={{
             rows: 1,
           }}
-          className="pb-[50px]"
           modules={[Pagination, Navigation]}
           pagination={{
             clickable: true,
@@ -41,8 +40,8 @@ const icon = "h-[12px] w-[12px] text-lightGrayish m-2"
           {opinions.map((opinions) => (
                       <SwiperSlide key={opinions.id}>
                           <div>
-                             <p className="regular text-[19px] mb-[20px] text-start">{opinions.text}</p>
-                             <p className="medium text-[17px] text-start">{opinions.name}</p>
+                             <p className="regular mb-[20px] text-[16px] md:text-[19px] text-start">{opinions.text}</p>
+                             <p className="medium text-[16px] md:text-[17px] text-start">{opinions.name}</p>
                           </div>
                       </SwiperSlide>
                  ))}
