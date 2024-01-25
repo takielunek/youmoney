@@ -7,9 +7,10 @@ Link do strony:
 * HTML
 * CSS
 * JavaScript
-* Bootstrap
 * Tailwind
+* Swiper
 * React
+* React Icon
 * Google Fonts
 * Vite
 

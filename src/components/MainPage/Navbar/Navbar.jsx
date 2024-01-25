@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <section>
       <div className="flex justify-between py-[15px] medium">
-        <img className="h-[54px]" src={darkLogo} alt="Logo" />
+        <img className="h-[54px] px-[30px] sm:px-0" src={darkLogo} alt="Logo" />
         <div className="text-lightGrey flex gap-[50px] self-center">
           <a className="hover:text-blue duration-300 hidden md:block" href="">O youmoney</a>
           <a className="hover:text-blue duration-300 hidden md:block" href="">Jak to działa</a>
