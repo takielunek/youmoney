@@ -4,7 +4,7 @@ import bulb from "../../../assets/other/bulb.svg"
 
 const Header = () => {
   return (
-    <section className="sm:pt-[50px] pb-[150px] sm:pb-[150px] relative px-[30px] w-full xs:w-[90%] xss:w-[80%] xsm:w-[70%] sm:w-full mx-auto sm:px-0">
+    <section id="header" className="sm:pt-[50px] pb-[150px] sm:pb-[150px] relative px-[30px] w-full xs:w-[90%] xss:w-[80%] xsm:w-[70%] sm:w-full mx-auto sm:px-0">
         <div className="sm:flex sm:justify-between">
             <div className="uppercase bold w-1/2 z-10 relative mt-[18px]">
                <p className="text-[32px] sm:text-[57.6px] text-grey">szybka <br /> pożyczka <br /> online</p>

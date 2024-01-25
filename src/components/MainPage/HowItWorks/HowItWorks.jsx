@@ -29,7 +29,7 @@ const HowItWorks = () => {
     </div>
    </div>
     <div className="flex justify-around my-[85px]">
-        <a href=""><button className="px-[45px] py-[20px] bg-blue text-white medium text-[16px] sm:text-[18px] rounded-2xl hover:bg-darkGrey duration-300">Weź pożyczkę teraz!</button></a>
+        <a href="#header"><button className="px-[45px] py-[20px] bg-blue text-white medium text-[16px] sm:text-[18px] rounded-2xl hover:bg-darkGrey duration-300">Weź pożyczkę teraz!</button></a>
     </div>
 
     </section>

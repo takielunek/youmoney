@@ -16,7 +16,7 @@ const ThanksTo = () => {
                <p className="text-[17px] sm:text-[21px] lg:text-[33px]">Dzięki <span className="bold underline">youmoney.pl</span> jednym wnioskiem znajdziesz dziesiątki ofert pożyczkodawców, którzy <span className="bold underline">przyznają Ci pożyczkę.</span></p>
                <p className="text-[16px] sm:text-[19px] lg:text-[24px] light sm:mt-[17px]">Niezależnie od Twojej historii kredytowej!</p>
                <div className="mt-[30px] md:mt-[40px] flex justify-around sm:justify-start">
-                      <a href=""><button className="medium px-[30px] py-[12px] border-2 border-white bg-blue text-white text-[15px] sm:text-[16px] lg:text-[18px] rounded-2xl hover:text-blue hover:bg-white duration-300">Przejdź do wniosku</button></a>
+                      <a href="#header"><button className="medium px-[30px] py-[12px] border-2 border-white bg-blue text-white text-[15px] sm:text-[16px] lg:text-[18px] rounded-2xl hover:text-blue hover:bg-white duration-300">Przejdź do wniosku</button></a>
                </div>
          </div>
    </div>

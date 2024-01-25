@@ -16,7 +16,7 @@ const Loan = () => {
           ))}
            </div>
         <div className="text-center">
-          <a className="text-[16px] sm:text-[17px] md:text-[18px] underline text-white medium hover:text-superLightGrey duration-700" href="">Potrzebuje innej kwoty</a>
+          <a className="text-[16px] sm:text-[17px] md:text-[18px] underline text-white medium hover:text-superLightGrey duration-700" href="#header">Potrzebuje innej kwoty</a>
         </div>
 
           <img className="absolute -top-28 -left-14 -rotate-[10deg] w-[320px]" src={money} alt="Bill" />
