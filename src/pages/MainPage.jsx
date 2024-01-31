@@ -14,23 +14,23 @@ import Footer from "../components/MainPage/Footer/Footer"
 const MainPage = () => {
   return (
     <div>
-        <div className="bg-header">
-           <div className="wrapper">
-            <Navbar />
-            <Header />
-           </div>
+      <div className="bg-header">
+        <div className="wrapper w-11/12 md:w-10/12 mx-auto ">
+          <Navbar />
+          <Header />
         </div>
-           <HowItWorks />
-           <ThanksTo />
-           <AboutUs />
-           <Opinions />
-           <Loan />
-           <Questions />
-           <Benefits />
-           <Answers />
-           <Footer />
+      </div>
+      <HowItWorks />
+      <ThanksTo />
+      <AboutUs />
+      <Opinions />
+      <Loan />
+      <Questions />
+      <Benefits />
+      <Answers />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default MainPage

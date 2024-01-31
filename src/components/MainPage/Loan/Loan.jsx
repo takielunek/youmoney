@@ -1,5 +1,5 @@
 import { loan } from "../../../index.js";
-import money from "../../../assets/other/money.png"
+import money from "../../../assets/MainPage/other/money.png";
 
 const Loan = () => {
   return (

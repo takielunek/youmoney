@@ -1,4 +1,4 @@
-import check from "../../../assets/other/check.png"
+import check from "../../../assets/MainPage/other/check.png";
 import { header } from "../../../index.js";
 
 const TextSection = () => {

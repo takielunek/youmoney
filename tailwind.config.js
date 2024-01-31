@@ -13,10 +13,11 @@ export default {
         blue: "#247BF6",
         darkBlue: "#171D34",
         grayish: "#415462",
-        lightGrayish:"#A0A9B0",
-        darkGrayish:"#24333E",
+        lightGrayish: "#A0A9B0",
+        darkGrayish: "#24333E",
         cream: "#dadde0",
-        silver: "#e4e8ec"
+        silver: "#e4e8ec",
+        red: "#c62828;"
       },
     },
     screens: {

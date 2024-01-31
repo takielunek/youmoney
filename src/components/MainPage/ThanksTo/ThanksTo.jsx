@@ -1,5 +1,5 @@
-import bg2 from "../../../assets/bg/bg2.png"
-import bg3 from "../../../assets/bg/bg3.png"
+import bg2 from "../../../assets/MainPage/bg/bg2.png"
+import bg3 from "../../../assets/MainPage/bg/bg3.png";
 
 const ThanksTo = () => {
   return (

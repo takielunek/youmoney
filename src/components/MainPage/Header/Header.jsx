@@ -1,5 +1,5 @@
-import woman from "../../../assets/bg/bg1.png"
-import bulb from "../../../assets/other/bulb.svg"
+import woman from "../../../assets/MainPage/bg/bg1.png";
+import bulb from "../../../assets/MainPage/other/bulb.svg";
 
 
 const Header = () => {
