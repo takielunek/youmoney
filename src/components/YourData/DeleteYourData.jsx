@@ -9,11 +9,11 @@ const DeleteYourData = () => {
   const label =
     "absolute bg-white px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
   const questionMark =
-    "bg-cream rounded-full h-[20px] w-[20px] hidden sm:block absolute right-[28px] translate-x-1/2 top-[50%] -translate-y-1/2";
+    "bg-cream rounded-full h-[20px] w-[20px] hidden sm:block absolute right-[28px] translate-x-1/2 bottom-[50%] translate-y-1/2";
   const speechBuble =
-    "absolute w-[204px] text-[12px] text-white text-center bg-grey rounded-md py-[5px] px-[25px] right-[28px] translate-x-1/2 bottom-[50%] -translate-y-1/4";
+    "absolute w-[204px] text-[12px] text-white text-center bg-grey rounded-md py-[5px] px-[25px] right-[28px] translate-x-1/2 bottom-[45px]";
   const icon =
-    "absolute bottom-[50%] -translate-y-1/3 right-[28px] translate-x-1/2 text-grey";
+    "absolute bottom-[33.3px] right-[28px] translate-x-1/2 text-grey";
 
   const [isHovered, setHovered] = useState(false);
 
