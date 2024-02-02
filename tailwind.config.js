@@ -17,7 +17,8 @@ export default {
         darkGrayish: "#24333E",
         cream: "#dadde0",
         silver: "#e4e8ec",
-        red: "#c62828;"
+        red: "#c62828;",
+        sky: "#bfdbfe",
       },
     },
     screens: {

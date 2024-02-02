@@ -1,5 +1,5 @@
 import TextSection from "./TextSection"
-import { itWorks } from "../../../index.js";
+import { itWorks } from "./index.js";
 
 
 const HowItWorks = () => {

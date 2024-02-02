@@ -1,4 +1,4 @@
-import { questions } from "../../../index.js";
+import { questions } from "./index.js";
 import Accordion from "./Accordion.jsx";
 
 const Questions = () => {

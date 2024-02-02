@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
-import { opinions } from "../../../index.js";
+import { opinions } from "./index.js";
 import 'swiper/css';
 
 const CarouselDefault = () => {

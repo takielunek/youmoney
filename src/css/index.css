@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-@import './clash-display.css';
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import "./clash-display.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,24 +21,24 @@ body {
 /* clash display  */
 
 .light {
- font-family: 'ClashDisplay-Light';
+  font-family: "ClashDisplay-Light";
 }
 
 .regular {
- font-family: 'ClashDisplay-Regular';
+  font-family: "ClashDisplay-Regular";
 }
 
 .medium {
- font-family: 'ClashDisplay-Medium';
+  font-family: "ClashDisplay-Medium";
 }
 
 .bold {
-font-family: 'ClashDisplay-Bold';
+  font-family: "ClashDisplay-Bold";
 }
 
 .extraBold {
-font-family: 'ClashDisplay-Bold';
-font-weight: 900;
+  font-family: "ClashDisplay-Bold";
+  font-weight: 900;
 }
 
 /* ubuntu  */
@@ -67,7 +67,6 @@ font-weight: 900;
   font-style: normal;
 }
 
-
 /* main  */
 
 .bg-header {
@@ -77,12 +76,14 @@ font-weight: 900;
   z-index: -1;
 }
 
-.bottomShadow {
-  box-shadow: 0px 3px 2px -1px #1095C120;
+.benefitsShadow {
+  box-shadow:
+    0 4px 8px rgb(51 77 114 / 6%),
+    0 20px 40px rgb(51 77 114 / 6%);
 }
 
 .bgShadow {
-  box-shadow: 0px 25px 25px 5px #1095C120;
+  box-shadow: 0px 25px 25px 5px #1095c120;
 }
 
 .rotateX {

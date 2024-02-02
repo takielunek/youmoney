@@ -1,4 +1,4 @@
-import { aboutUs } from "../../../index.js";
+import { aboutUs } from "./index.js";
 
 const AboutPlatform = () => {
   return (

@@ -1,4 +1,4 @@
-import { how } from "./../../index.js";
+import { how } from "./index.js";
 
 const How = () => {
   return (

@@ -1,4 +1,4 @@
-import { loan } from "../../../index.js";
+import { loan } from "./index.js";
 import money from "../../../assets/MainPage/other/money.png";
 
 const Loan = () => {

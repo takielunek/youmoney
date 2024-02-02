@@ -22,8 +22,10 @@ const MainPage = () => {
       </div>
       <HowItWorks />
       <ThanksTo />
+       <div className="wrapper w-11/12 md:w-10/12 mx-auto ">
       <AboutUs />
       <Opinions />
+      </div>
       <Loan />
       <Questions />
       <Benefits />

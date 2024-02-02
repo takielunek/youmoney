@@ -1,5 +1,5 @@
 import check from "../../../assets/MainPage/other/check.png";
-import { header } from "../../../index.js";
+import { header } from "./index.js";
 
 const TextSection = () => {
   return (

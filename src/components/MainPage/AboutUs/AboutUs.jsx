@@ -1,9 +1,9 @@
-import { about } from "../../../index.js";
+import { about } from "./index.js";
 
 
 const AboutUs = () => {
   return (
-    <section className="py-[54px] wrapper w-11/12 md:w-10/12 mx-auto ">
+    <section className="py-[54px]">
       <div className="w-10/12 md:w-full mx-auto">
         <div className="text-center">
           <h1 className="text-[30px] sm:text-[40px] md:text-[54px] bold text-grey">

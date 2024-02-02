@@ -1,4 +1,4 @@
-import { partners } from "./../../index.js";
+import { partners } from "./index.js";
 
 const Partners = () => {
   return (

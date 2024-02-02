@@ -1,4 +1,3 @@
-
 const SendFeedback = () => {
  const placeholder = "text-[15px] md:text-[20px] border-2 border-cream rounded-2xl text-cream light px-[17px] py-[13px]"
 

@@ -1,5 +1,6 @@
 import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
-import { footer } from "../../../index.js";
+// import privacy from "../../../assets/pdf/polityka_prywatnosci_findao.pdf";
+import { footer } from "./index.js";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -37,10 +38,10 @@ const Footer = () => {
             Obsługa klienta
           </p>
           <div className="flex flex-col mt-[18px] gap-[8px] text-[14px] text-lightGrayish">
-            <a className="hover:text-white" href="">
+            <a className="hover:text-white" href="" target="_blank">
               Polityka Prywatności serwisu
             </a>
-            <a className="hover:text-white" href="">
+            <a className="hover:text-white" href="" target="_blank">
               Regulamin serwisu
             </a>
             <a className="hover:text-white" href="/list">

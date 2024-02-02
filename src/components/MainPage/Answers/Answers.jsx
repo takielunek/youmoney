@@ -1,4 +1,4 @@
-import { answers } from "../../../index.js";
+import { answers } from "./index.js";
 
 const Answers = () => {
   return (
