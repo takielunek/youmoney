@@ -5,7 +5,12 @@ import HowItWorks from "../pages/HowItWorks";
 import ListOfPartners from "../pages/ListOfPartners";
 import MainPage from "../pages/MainPage";
 import { Routes, Route } from "react-router-dom";
-import YourData from "../pages/YourData";
+import DeleteYourData from "./YourData/DeleteYourData";
+import StepOne from "./LoanApplication.jsx/StepOne.jsx/StepOne";
+import StepTwo from "./LoanApplication.jsx/StepTwo.jsx/StepTwo";
+import StepThree from "./LoanApplication.jsx/StepThree.jsx/StepThree";
+import StepFour from "./LoanApplication.jsx/StepFour.jsx/StepFour";
+
 
 const AllRoutes = () => {
   return (
@@ -16,7 +21,11 @@ const AllRoutes = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/collaboration" element={<Collaboration />} />
       <Route path="/list" element={<ListOfPartners />} />
-      <Route path="/data" element={<YourData />} />
+      <Route path="/data" element={<DeleteYourData />} />
+      <Route path="/step1" element={<StepOne />} />
+      <Route path="/step2" element={<StepTwo />} />
+      <Route path="/step3" element={<StepThree />} />
+      <Route path="/step4" element={<StepFour />} />
     </Routes>
   );
 };

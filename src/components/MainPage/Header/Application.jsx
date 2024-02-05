@@ -27,7 +27,10 @@ const Application = () => {
         </div>
 
         <div className="flex justify-around bg-blue py-[13.5px] px-[12px] rounded-xl mt-[36px] mb-[18px]">
-          <a className="text-white text-[16px] sm:text-[18px] regular" href="">
+          <a
+            className="text-white text-[16px] sm:text-[18px] regular"
+            href="/step1"
+          >
             <button>Wnioskuj o pożyczkę</button>
           </a>
         </div>

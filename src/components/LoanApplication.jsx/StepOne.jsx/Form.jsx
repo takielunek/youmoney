@@ -1,9 +1,9 @@
-import darkLogo from "./../../assets/MainPage/logo/darkLogo.svg";
 import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
-import { data } from "./index.js";
+import {stepOne} from "./index.js"
+import Checkbox from "./Checkbox.jsx";
 
-const DeleteYourData = () => {
+const Form = () => {
   const border =
     "relative border-2 border-cream rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
   const label =
@@ -11,7 +11,7 @@ const DeleteYourData = () => {
   const questionMark =
     "bg-cream rounded-full h-[20px] w-[20px] hidden sm:block absolute right-[28px] translate-x-1/2 bottom-[50%] translate-y-1/2";
   const speechBuble =
-    "absolute w-[204px] text-[12px] text-white text-center bg-grey rounded-md py-[5px] px-[25px] right-[28px] translate-x-1/2 bottom-[45px]";
+    "absolute w-[204px] text-[12px] text-white text-center bg-grey rounded-md pt-[4px] pb-[8px] px-[8px] right-[28px] translate-x-1/2 bottom-[45px]";
   const icon =
     "absolute bottom-[33.3px] right-[28px] translate-x-1/2 text-grey";
 
@@ -26,28 +26,20 @@ const DeleteYourData = () => {
   };
 
   return (
-    <section className="w-full sm:w-[600px] mx-auto">
+    <div className="w-full sm:w-[600px] mx-auto">
       <div className="py-[54px]">
         <div className="shadow-xl rounded-xl my-[54px] py-[54px] px-[6%]">
-          <p className="text-[31.5px] mb-[32px] font-bold">
-            Prośba o usunięcie danych
-          </p>
-          <p className="text-[18px] mb-[24px]">
-            Wypełnij poniższy formularz, a my zweryfikujemy czy mamy aktualnie w
-            naszej bazie Twoje dane - jeśli tak, usuniemy je. Tym samym nie
-            otrzymasz już więcej od nas powiadomień sms oraz e-mail.
-          </p>
           <div className="flex flex-col text-[18px] gap-[18px]">
-            {data.map((data) => (
-              <div key={data.id} className="relative z-0">
+            {stepOne.map((stepOne) => (
+              <div key={stepOne.id} className="relative z-0">
                 <div className={`${label} z-10`}>
                   <label className="text-grayish text-[14px]">
-                    {data.text}
+                    {stepOne.text}
                   </label>
                 </div>
                 <input
                   type="tel"
-                  placeholder={data.placeholder}
+                  placeholder={stepOne.placeholder}
                   className={`${border}`}
                 />
                 <div
@@ -61,31 +53,25 @@ const DeleteYourData = () => {
                 </div>
                 {isHovered && (
                   <div>
-                    <div className={`${speechBuble}`}>
-                      Zwróć uwagę, aby to był ten, <br /> który podawałaś/eś
-                      podczas <br />
-                      składaniu wniosku
-                    </div>
+                    <div className={`${speechBuble}`}>{stepOne.speech}</div>
                     <AiFillCaretDown className={`${icon}`} />
                   </div>
                 )}
               </div>
             ))}
+            <Checkbox />
             <div className=" bg-blue py-[13.5px] text-center rounded-2xl hover:bg-darkGrey duration-300">
-              <button className="text-white text-[18px] font-bold">
-                Wyślij prośbę
-              </button>
+              <a href="/step2">
+                <button className="text-white text-[18px] font-bold">
+                  Dalej
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="grid place-content-center my-[54px]">
-        <a href="/">
-          <img src={darkLogo} alt="Logo" className="h-[54px]" />
-        </a>
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default DeleteYourData;
+export default Form;
