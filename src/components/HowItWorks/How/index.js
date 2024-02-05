@@ -1,6 +1,6 @@
-import how1 from "../../assets/HowItWorks/how1.svg";
-import how2 from "../../assets/HowItWorks/how2.svg";
-import how3 from "../../assets/HowItWorks/how3.svg";
+import how1 from "../../../assets/HowItWorks/how1.svg";
+import how2 from "../../../assets/HowItWorks/how2.svg";
+import how3 from "../../../assets/HowItWorks/how3.svg";
 
 export const how = [
   {

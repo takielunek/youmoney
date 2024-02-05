@@ -10,6 +10,7 @@ Link do strony:
 * Tailwind
 * Swiper
 * React
+* React Hooks
 * React Icon
 * Google Fonts
 * Vite

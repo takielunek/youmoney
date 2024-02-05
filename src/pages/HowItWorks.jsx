@@ -1,6 +1,6 @@
-import How from "../components/HowItWorks/How";
+import How from "../components/HowItWorks/How/How";
 import Footer from "../components/MainPage/Footer/Footer";
-import Navbar from "../components/MainPage/Navbar/Navbar";
+import Navbar from "../components/HowItWorks/Navbar/Navbar";
 
 const HowItWorks = () => {
   return (

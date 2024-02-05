@@ -1,10 +1,11 @@
 import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
-// import privacy from "../../../assets/pdf/polityka_prywatnosci_findao.pdf";
+import privacy from "../../../assets/pdf/polityka_prywatnosci_findao.pdf";
+import regulations from "../../../assets/pdf/regulamin_findao.pdf";
 import { footer } from "./index.js";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
-    
+  const currentYear = new Date().getFullYear();
+
   return (
     <section className="bg-darkBlue pt-[96px] sm:pt-[108px] pb-[54px]">
       <div className="wrapper sm:flex w-11/12 md:w-10/12">
@@ -38,10 +39,20 @@ const Footer = () => {
             Obsługa klienta
           </p>
           <div className="flex flex-col mt-[18px] gap-[8px] text-[14px] text-lightGrayish">
-            <a className="hover:text-white" href="" target="_blank">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+              href={privacy}
+            >
               Polityka Prywatności serwisu
             </a>
-            <a className="hover:text-white" href="" target="_blank">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+              href={regulations}
+            >
               Regulamin serwisu
             </a>
             <a className="hover:text-white" href="/list">
@@ -67,6 +78,6 @@ const Footer = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Footer
+export default Footer;
