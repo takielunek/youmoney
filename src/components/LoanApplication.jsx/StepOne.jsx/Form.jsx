@@ -27,8 +27,8 @@ const Form = () => {
 
   return (
     <div className="w-full sm:w-[600px] mx-auto">
-      <div className="py-[54px]">
-        <div className="shadow-xl rounded-xl my-[54px] py-[54px] px-[6%]">
+      <div>
+        <div className="shadow-xl rounded-xl mt-[36px] mb-[40px] sm:mb-[54px] py-[54px] px-[6%]">
           <div className="flex flex-col text-[18px] gap-[18px]">
             {stepOne.map((stepOne) => (
               <div key={stepOne.id} className="relative z-0">
@@ -60,13 +60,6 @@ const Form = () => {
               </div>
             ))}
             <Checkbox />
-            <div className=" bg-blue py-[13.5px] text-center rounded-2xl hover:bg-darkGrey duration-300">
-              <a href="/step2">
-                <button className="text-white text-[18px] font-bold">
-                  Dalej
-                </button>
-              </a>
-            </div>
           </div>
         </div>
       </div>

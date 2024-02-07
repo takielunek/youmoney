@@ -22,6 +22,7 @@ export default {
       },
     },
     screens: {
+      xxs: "350px",
       xs: "480px",
       xss: "520px",
       ss: "620px",
@@ -33,5 +34,8 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require('@tailwindcss/forms')
+  ],
 };

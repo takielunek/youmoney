@@ -24,7 +24,7 @@ const Header = () => {
       </div>
       <div className="z-0">
         <img
-          className="absolute -top-[50px] sm:top-[70px] right-0 xs:right-[50px] sm:left-[180px] h-[250px] sm:h-[663px]"
+          className="absolute -top-[50px] sm:top-[70px] right-0 xs:right-[50px] sm:left-[5%] xmd:left-[10%] lg:left-[180px] h-[250px] sm:h-[663px]"
           src={woman}
           alt="Woman"
         />

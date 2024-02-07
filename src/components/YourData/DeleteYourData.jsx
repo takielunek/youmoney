@@ -2,6 +2,7 @@ import darkLogo from "./../../assets/MainPage/logo/darkLogo.svg";
 import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
 import { data } from "./index.js";
+import { useForm } from "react-hook-form";
 
 const DeleteYourData = () => {
   const border =
@@ -25,6 +26,14 @@ const DeleteYourData = () => {
     setHovered(false);
   };
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+    const onSubmit = (data) => alert(JSON.stringify(data))
+
   return (
     <section className="w-full sm:w-[600px] mx-auto">
       <div className="py-[54px]">
@@ -37,46 +46,66 @@ const DeleteYourData = () => {
             naszej bazie Twoje dane - jeśli tak, usuniemy je. Tym samym nie
             otrzymasz już więcej od nas powiadomień sms oraz e-mail.
           </p>
-          <div className="flex flex-col text-[18px] gap-[18px]">
-            {data.map((data) => (
-              <div key={data.id} className="relative z-0">
-                <div className={`${label} z-10`}>
-                  <label className="text-grayish text-[14px]">
-                    {data.text}
-                  </label>
-                </div>
-                <input
-                  type="tel"
-                  placeholder={data.placeholder}
-                  className={`${border}`}
-                />
-                <div
-                  className={`${questionMark}`}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <p className="text-[12px] text-grayish grid place-content-center">
-                    ?
-                  </p>
-                </div>
-                {isHovered && (
-                  <div>
-                    <div className={`${speechBuble}`}>
-                      Zwróć uwagę, aby to był ten, <br /> który podawałaś/eś
-                      podczas <br />
-                      składaniu wniosku
-                    </div>
-                    <AiFillCaretDown className={`${icon}`} />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="flex flex-col text-[18px] gap-[18px]">
+              {data.map((data) => (
+                <div key={data.id} className="relative z-0">
+                  <div className={`${label} z-10`}>
+                    <label className="text-grayish text-[14px]">
+                      {data.text}
+                    </label>
                   </div>
-                )}
+                  <input
+                    type="tel"
+                    placeholder={data.placeholder}
+                    {...register("data", { required: true })}
+                    className={`${border}`}
+                    style={
+                      errors.data && {
+                        border: "2px solid red",
+                        boxShadow: "none",
+                      }
+                    }
+                  />
+                  {errors.data && (
+                    <span className="text-red text-[12px]">{data.message}</span>
+                  )}
+                  <div
+                    className={`${questionMark}`}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    style={
+                      errors.data && {
+                        bottom: "65%"
+                      }
+                    }
+                  >
+                    <p className="text-[12px] text-grayish grid place-content-center">
+                      ?
+                    </p>
+                  </div>
+                  {isHovered && (
+                    <div>
+                      <div className={`${speechBuble}`}>
+                        Zwróć uwagę, aby to był ten, <br /> który podawałaś/eś
+                        podczas <br />
+                        składaniu wniosku
+                      </div>
+                      <AiFillCaretDown className={`${icon}`} />
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div>
+                <button
+                  type="submit"
+                  className="text-white text-[18px] font-bold bg-blue py-[13.5px] w-full text-center rounded-2xl hover:bg-darkGrey duration-300"
+                >
+                  Wyślij prośbę
+                </button>
               </div>
-            ))}
-            <div className=" bg-blue py-[13.5px] text-center rounded-2xl hover:bg-darkGrey duration-300">
-              <button className="text-white text-[18px] font-bold">
-                Wyślij prośbę
-              </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div className="grid place-content-center my-[54px]">
