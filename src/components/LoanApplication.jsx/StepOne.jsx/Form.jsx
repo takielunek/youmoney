@@ -21,6 +21,7 @@ const Form = () => {
   const href = "text-blue hover:text-grayish duration-300";
 
   const [isHovered, setHovered] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -28,6 +29,10 @@ const Form = () => {
 
   const handleMouseLeave = () => {
     setHovered(false);
+  };
+
+  const handleToggle = () => {
+    setToggle(!toggle);
   };
 
   const {
@@ -162,7 +167,94 @@ const Form = () => {
                     )}
                     Chcę dostawać od Youmoney.pl i partnerów najnowsze i
                     dopasowane do moich potrzeb informacje o produktach i
-                    usługach. <span className="cursor-pointer">[ROZWIŃ]</span>
+                    usługach.{" "}
+                    {toggle === false ? (
+                      <span onClick={handleToggle} className="cursor-pointer">
+                        [ROZWIŃ]
+                      </span>
+                    ) : (
+                      <div onClick={handleToggle} className="grid gap-[4px]">
+                        <span className="cursor-pointer">[ZWIŃ]</span>
+                        <div className="grid gap-[4px]">
+                          <p>
+                            Wyrażam zgodę na przesyłanie przez Findao sp. z o.o.
+                            informacji handlowych dotyczących produktów lub
+                            usług własnych w formie:
+                          </p>
+                          <div>
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>zaznacz wszystkie</label>
+                          </div>
+                          <div className="ml-[25px]">
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>
+                              wiadomości na mój adres email wskazany w
+                              formularzu kontaktowym
+                            </label>
+                          </div>
+                          <div className="ml-[25px]">
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>
+                              wiadomości SMS na mój numer telefonu wskazany w
+                              formularzu kontaktowym
+                            </label>
+                          </div>
+                        </div>
+                        <div className="grid gap-[4px]">
+                          <p>
+                            Wyrażam zgodę na przesyłanie przez Findao sp. z o.o.
+                            informacji handlowych dotyczących produktów lub
+                            usług banków i firm pożyczkowych wskazanych pod TYM
+                            adresem w formie:
+                          </p>
+                          <div>
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>zaznacz wszystkie</label>
+                          </div>
+                          <div className="ml-[25px]">
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>
+                              wiadomości na mój adres email wskazany w
+                              formularzu kontaktowym
+                            </label>
+                          </div>
+                          <div className="ml-[25px]">
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>
+                              wiadomości głosowych na mój numer telefonu
+                              wskazany w formularzu kontaktowym.
+                            </label>
+                          </div>
+                          <div className="ml-[25px]">
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>
+                              wiadomości SMS na mój numer telefonu wskazany w
+                              formularzu kontaktowym
+                            </label>
+                          </div>
+                          <div className="ml-[25px]">
+                            <input type="checkbox" className={`${input}`} />{" "}
+                            <label>
+                              połączeń telefonicznych na mój numer telefonu
+                              wskazany w formularzu kontaktowym.
+                            </label>
+                          </div>
+                        </div>
+                        <div>
+                          <p className="text-[12px]">
+                            W każdej chwili przysługuje Ci prawo cofnięcia
+                            każdej zgody wyrażonej dobrowolnie. <br />{" "}
+                            Administratorem Twoich danych osobowych jest Findao
+                            sp. z o.o. Kontakt z administratorem możliwy jest
+                            drogą mailową na adres iod@findao.pl. Twoje dane
+                            osobowe będą przetwarzane celu świadczenia usług
+                            drogą elektroniczną w ramach konta użytkownika w
+                            serwisie Youmoney.pl oraz w granicach udzielonych
+                            zgód, do celów marketingu bezpośredniego.
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </label>
                 </div>
               </div>
