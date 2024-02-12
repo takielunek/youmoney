@@ -1,5 +1,5 @@
 ## Informacje ogólne
-Strona internetowa stworzona na potrzeby firmy youmoney. 
+Strona internetowa stworzona na potrzeby firmy youmoney - W TRAKCIE TWORZENIA.
 
 Link do strony: 
 
