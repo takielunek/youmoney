@@ -1,4 +1,5 @@
 import ContactUs from "../components/Contact/ContactUs";
+import ColorButton from "../components/MainPage/Buttons/ColorButton";
 import Footer from "../components/MainPage/Footer/Footer";
 import Navbar from "../components/MainPage/Navbar/Navbar";
 
@@ -10,6 +11,7 @@ const Contact = () => {
         <ContactUs />
       </div>
       <Footer />
+      <ColorButton />
     </div>
   );
 };

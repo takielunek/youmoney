@@ -10,7 +10,9 @@ import Benefits from "../components/MainPage/Benefits/Benefits";
 import Answers from "../components/MainPage/Answers/Answers";
 import Footer from "../components/MainPage/Footer/Footer";
 import "./index.js";
-import Buttons from "../components/MainPage/Buttons/Buttons.jsx";
+import ColorButton from "../components/MainPage/Buttons/ColorButton.jsx";
+import LoanButton from "../components/MainPage/Buttons/LoanButton.jsx";
+
 
 const MainPage = () => {
   const sectionsWrapper = "wrapper w-11/12 md:w-10/12 mx-auto ";
@@ -34,7 +36,8 @@ const MainPage = () => {
       <Benefits />
       <Answers />
       <Footer />
-      <Buttons />
+      <ColorButton />
+      <LoanButton />
     </div>
   );
 };

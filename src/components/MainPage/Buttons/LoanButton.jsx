@@ -1,7 +1,6 @@
 import money from "../../../assets/MainPage/other/money.svg";
-import { VscColorMode } from "react-icons/vsc";
 
-const Buttons = () => {
+const LoanButton = () => {
   return (
     <div>
       <a href="/step1">
@@ -19,12 +18,8 @@ const Buttons = () => {
           </div>
         </button>
       </a>
-
-      <div className="fixed bottom-[16px] right-[15px] bg-darkGrey text-white p-[16px] rounded-full cursor-pointer">
-        <VscColorMode />
-      </div>
     </div>
   );
 };
 
-export default Buttons;
+export default LoanButton;

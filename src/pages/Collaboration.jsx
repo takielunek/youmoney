@@ -1,5 +1,6 @@
 
 import CollaborationWithUs from "../components/Collaboration/CollaborationWithUs";
+import ColorButton from "../components/MainPage/Buttons/ColorButton";
 import Footer from "../components/MainPage/Footer/Footer";
 import Navbar from "../components/MainPage/Navbar/Navbar";
 
@@ -11,6 +12,7 @@ const Collaboration = () => {
         <CollaborationWithUs />
       </div>
       <Footer />
+      <ColorButton />
     </div>
   );
 };

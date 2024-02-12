@@ -2,6 +2,7 @@ import AboutPlatform from "../components/AboutUs/AboutPlatform/AboutPlatform";
 import About from "../components/AboutUs/About/About";
 import Footer from "../components/MainPage/Footer/Footer";
 import Navbar from "../components/AboutUs/Navbar/Navbar";
+import ColorButton from "../components/MainPage/Buttons/ColorButton";
 
 const AboutUs = () => {
   return (
@@ -12,6 +13,7 @@ const AboutUs = () => {
         <AboutPlatform />
       </div>
       <Footer />
+      <ColorButton />
     </div>
   );
 };
