@@ -6,7 +6,7 @@ const LoanButton = () => {
       <a href="/step1">
         <button
           id="toTopLink"
-          className="z-50 hidden fixed bottom-[16px] right-[80px] bg-blue hover:bg-darkBlue duration-500 text-white ubuntu-medium text-[16px] px-[48px] py-[10px] border-2 border-white rounded-xl"
+          className="z-40 hidden fixed bottom-[16px] right-[80px] bg-blue hover:bg-darkBlue duration-500 text-white ubuntu-medium text-[16px] px-[48px] py-[10px] border-2 border-white rounded-xl"
         >
           Weź pożyczkę{" "}
           <div className="relative">
