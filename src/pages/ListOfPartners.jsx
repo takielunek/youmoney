@@ -1,5 +1,4 @@
 import Partners from "../components/ListOfPartners/Partners";
-import ColorButton from "../components/MainPage/Buttons/ColorButton";
 import Footer from "../components/MainPage/Footer/Footer";
 import Navbar from "../components/MainPage/Navbar/Navbar";
 
@@ -11,7 +10,6 @@ const ListOfPartners = () => {
         <Partners />
       </div>
       <Footer />
-      <ColorButton />
     </div>
   );
 };

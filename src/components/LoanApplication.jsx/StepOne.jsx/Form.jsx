@@ -185,16 +185,46 @@ const Form = () => {
                             <input type="checkbox" className={`${input}`} />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
-                          <div className="ml-[25px]">
-                            <input type="checkbox" className={`${input}`} />{" "}
+                          <div className={`${gap} ml-[25px]`}>
+                            <input
+                              type="checkbox"
+                              className={`${input}`}
+                              {...register("accepts", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
+                            />
+
                             <label>
+                              {errors.accepts && (
+                                <span className="text-red mr-[5px]">
+                                  {errors.accepts.message}
+                                </span>
+                              )}
                               wiadomości na mój adres email wskazany w
                               formularzu kontaktowym
                             </label>
                           </div>
-                          <div className="ml-[25px]">
-                            <input type="checkbox" className={`${input}`} />{" "}
+                          <div className={`${gap} ml-[25px]`}>
+                            <input
+                              type="checkbox"
+                              className={`${input}`}
+                              {...register("accepts", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
+                            />
+
                             <label>
+                              {errors.accepts && (
+                                <span className="text-red mr-[5px]">
+                                  {errors.accepts.message}
+                                </span>
+                              )}
                               wiadomości SMS na mój numer telefonu wskazany w
                               formularzu kontaktowym
                             </label>
@@ -211,37 +241,97 @@ const Form = () => {
                             <input type="checkbox" className={`${input}`} />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
-                          <div className="ml-[25px]">
-                            <input type="checkbox" className={`${input}`} />{" "}
+                          <div className={`${gap} ml-[25px]`}>
+                            <input
+                              type="checkbox"
+                              className={`${input}`}
+                              {...register("accepts", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
+                            />
+
                             <label>
+                              {errors.accepts && (
+                                <span className="text-red mr-[5px]">
+                                  {errors.accepts.message}
+                                </span>
+                              )}
                               wiadomości na mój adres email wskazany w
                               formularzu kontaktowym
                             </label>
                           </div>
-                          <div className="ml-[25px]">
-                            <input type="checkbox" className={`${input}`} />{" "}
+                          <div className={`${gap} ml-[25px]`}>
+                            <input
+                              type="checkbox"
+                              className={`${input}`}
+                              {...register("accepts", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
+                            />
+
                             <label>
+                              {errors.accepts && (
+                                <span className="text-red mr-[5px]">
+                                  {errors.accepts.message}
+                                </span>
+                              )}
                               wiadomości głosowych na mój numer telefonu
                               wskazany w formularzu kontaktowym.
                             </label>
                           </div>
-                          <div className="ml-[25px]">
-                            <input type="checkbox" className={`${input}`} />{" "}
+                          <div className={`${gap} ml-[25px]`}>
+                            <input
+                              type="checkbox"
+                              className={`${input}`}
+                              {...register("accepts", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
+                            />
+
                             <label>
+                              {errors.accepts && (
+                                <span className="text-red mr-[5px]">
+                                  {errors.accepts.message}
+                                </span>
+                              )}
                               wiadomości SMS na mój numer telefonu wskazany w
                               formularzu kontaktowym
                             </label>
                           </div>
-                          <div className="ml-[25px]">
-                            <input type="checkbox" className={`${input}`} />{" "}
+                          <div className={`${gap} ml-[25px]`}>
+                            <input
+                              type="checkbox"
+                              className={`${input}`}
+                              {...register("accepts", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
+                            />
+
                             <label>
+                              {errors.accepts && (
+                                <span className="text-red mr-[5px]">
+                                  {errors.accepts.message}
+                                </span>
+                              )}
                               połączeń telefonicznych na mój numer telefonu
                               wskazany w formularzu kontaktowym.
                             </label>
                           </div>
                         </div>
                         <div>
-                          <p className="text-[12px]">
+                          <p className="text-[12px] mt-[10px]">
                             W każdej chwili przysługuje Ci prawo cofnięcia
                             każdej zgody wyrażonej dobrowolnie. <br />{" "}
                             Administratorem Twoich danych osobowych jest Findao

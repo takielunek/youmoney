@@ -1,13 +1,25 @@
 import AllRoutes from "./components/AllRoutes";
 import { BrowserRouter as Router } from "react-router-dom";
+import { createContext, useState } from "react";
+import ColorButton from "./components/MainPage/Buttons/ColorButton";
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
   return (
-    <div>
-      <Router>
-        <AllRoutes />
-      </Router>
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div id={theme}>
+        <Router>
+          <AllRoutes />
+          <ColorButton onChange={toggleTheme} />
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

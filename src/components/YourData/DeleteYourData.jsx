@@ -3,7 +3,6 @@ import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
 import { data } from "./index.js";
 import { useForm } from "react-hook-form";
-import ColorButton from "../MainPage/Buttons/ColorButton.jsx";
 
 const DeleteYourData = () => {
   const border =
@@ -114,7 +113,6 @@ const DeleteYourData = () => {
           <img src={darkLogo} alt="Logo" className="h-[54px]" />
         </a>
       </div>
-      <ColorButton />
     </section>
   );
 };

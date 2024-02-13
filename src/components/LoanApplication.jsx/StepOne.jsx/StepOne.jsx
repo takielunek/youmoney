@@ -2,7 +2,6 @@ import darkLogo from "../../../assets/MainPage/logo/darkLogo.svg";
 import Navbar from "./Navbar";
 import Form from "./Form";
 import Progress from "./Progress";
-import ColorButton from "../../MainPage/Buttons/ColorButton";
 
 const StepOne = () => {
   const currentYear = new Date().getFullYear();
@@ -26,7 +25,6 @@ const StepOne = () => {
           </div>
         </div>
       </div>
-      <ColorButton />
     </section>
   );
 };

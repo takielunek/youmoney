@@ -19,6 +19,8 @@ export default {
         silver: "#e4e8ec",
         red: "#c62828;",
         sky: "#bfdbfe",
+        darkMode: "#11191f",
+        darkModeText: "#edf0f3",
       },
     },
     screens: {
@@ -36,6 +38,6 @@ export default {
   },
   plugins: [
     // eslint-disable-next-line no-undef
-    require('@tailwindcss/forms')
+    require("@tailwindcss/forms"),
   ],
 };
