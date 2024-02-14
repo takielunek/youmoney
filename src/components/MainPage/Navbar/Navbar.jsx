@@ -1,7 +1,12 @@
 import darkLogo from "../../../assets/MainPage/logo/darkLogo.svg";
 import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
+import { createContext } from "react";
+export const ThemeContext = createContext(null);
 
-const Navbar = (theme) => {
+const Navbar = () => {
+
+    const { theme } = createContext(ThemeContext);
+
   return (
     <section>
       <div className="bg-transparent">

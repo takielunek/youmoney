@@ -1,7 +1,8 @@
 import { VscColorMode } from "react-icons/vsc";
 import { useState } from "react";
 
-const ColorButton = () => {
+// eslint-disable-next-line react/prop-types
+const ColorButton = ({toggleTheme}) => {
   const [isHovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -11,6 +12,8 @@ const ColorButton = () => {
   const handleMouseLeave = () => {
     setHovered(false);
   };
+
+
 
   return (
     <div>
@@ -27,6 +30,7 @@ const ColorButton = () => {
           className="z-50 fixed flex bottom-[16px] right-[15px] bg-darkGrey text-white py-[12px] px-[16px] w-[220px] rounded-full cursor-pointer"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onClick={() => toggleTheme()}
         >
           <p className="regular">Włącz ciemny motyw</p>
           <VscColorMode className="rotate-180 mt-[5px] ml-[8px]" />

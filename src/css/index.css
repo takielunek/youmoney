@@ -105,7 +105,7 @@ body {
 /* light / dark mode style  */
 
 #light .background {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 #dark .background {
