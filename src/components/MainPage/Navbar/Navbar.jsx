@@ -1,11 +1,11 @@
 import darkLogo from "../../../assets/MainPage/logo/darkLogo.svg";
 import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
-import { createContext } from "react";
-export const ThemeContext = createContext(null);
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Navbar = () => {
 
-    const { theme } = createContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
 
   return (
     <section>

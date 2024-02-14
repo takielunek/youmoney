@@ -10,12 +10,19 @@ import Answers from "../components/MainPage/Answers/Answers";
 import Footer from "../components/MainPage/Footer/Footer";
 import "./index.js";
 import LoanButton from "../components/MainPage/Buttons/LoanButton.jsx";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 
 const MainPage = () => {
   const sectionsWrapper = "wrapper w-11/12 md:w-10/12 mx-auto ";
+  const { theme } = useContext(ThemeContext);
+
+  console.log(theme);
 
   return (
-    <div className="relative background">
+    <div
+      className={`${theme === "light" ? "bg-white" : "bg-darkMode"} relative`}
+    >
       <Header />
       <HowItWorks />
       <ThanksTo />

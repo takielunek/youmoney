@@ -104,13 +104,13 @@ body {
 
 /* light / dark mode style  */
 
-#light .background {
+/* #light .background {
   background-color: #ffffff;
 }
 
 #dark .background {
   background-color: #11191f;
-}
+} */
 
 #light .bg-header {
   background-image: url("src/assets/MainPage/bg/bg.jpg");
