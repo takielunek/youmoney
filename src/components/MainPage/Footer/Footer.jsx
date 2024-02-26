@@ -2,12 +2,17 @@ import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
 import privacy from "../../../assets/pdf/polityka_prywatnosci_findao.pdf";
 import regulations from "../../../assets/pdf/regulamin_findao.pdf";
 import { footer } from "./index.js";
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Footer = () => {
+  const { theme } = useContext(ThemeContext);
   const currentYear = new Date().getFullYear();
 
   return (
-    <section className="bg-darkBlue pt-[96px] sm:pt-[108px] pb-[54px]">
+    <section
+      className={`${theme === "light" ? "bg-darkBlue" : "bg-darkMode"} pt-[96px] sm:pt-[108px] pb-[54px]`}
+    >
       <div className="wrapper sm:flex w-11/12 md:w-10/12">
         <div className="w-11/12 ss:w-2/3 sm:w-1/4 flex flex-col relative mx-auto">
           <a href="/">

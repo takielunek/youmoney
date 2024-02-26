@@ -1,14 +1,19 @@
 import { benefits } from "./index.js";
 import SwiperFreemode from "./SwiperFreeMode.jsx";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Benefits = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <section>
       <div className="mb-[54px]">
         <div className="py-[72px] wrapper ">
           <div className="text-center">
-            <h1 className="text-[30px] sm:text-[40px] md:text-[54px] bold text-grey">
+            <h1
+              className={`${theme === "light" ? "text-grey" : "text-superLightGrey2"} text-[30px] sm:text-[40px] md:text-[54px] bold`}
+            >
               Główne korzyści youmoney.pl
             </h1>
           </div>
@@ -17,7 +22,7 @@ const Benefits = () => {
               {benefits.map((benefits) => (
                 <div
                   key={benefits.id}
-                  className="w-1/4 my-[36px] mx-[18px] py-[45px] px-[30px] border-2 border-white rounded-xl benefitsShadow"
+                  className={`${theme === "light" ? "bg-transparent" : "bg-darkModeItemsBg"} w-1/4 my-[36px] mx-[18px] py-[45px] px-[30px] rounded-xl benefitsShadow`}
                 >
                   <div className="grid place-content-center">
                     <img
@@ -27,7 +32,9 @@ const Benefits = () => {
                     />
                   </div>
 
-                  <p className="text-[16px] md:text-[16px] text-lightGrey mt-[36px] text-center">
+                  <p
+                    className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[16px] md:text-[16px] mt-[36px] text-center`}
+                  >
                     {benefits.title}
                   </p>
                 </div>
@@ -41,6 +48,6 @@ const Benefits = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Benefits
+export default Benefits;

@@ -1,12 +1,17 @@
 import { about } from "./index.js";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const AboutUs = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <section className="py-[54px]">
       <div className="w-10/12 md:w-full mx-auto">
         <div className="text-center">
-          <h1 className="text-[30px] sm:text-[40px] md:text-[54px] bold text-grey">
+          <h1
+            className={`${theme === "light" ? "text-grey" : "text-superLightGrey2"} text-[30px] sm:text-[40px] md:text-[54px] bold`}
+          >
             Dlaczego youmoney.pl?
           </h1>
         </div>
@@ -19,7 +24,7 @@ const AboutUs = () => {
               <p className="text-[25px] sm:text-[32px] md:text-[36px] text-blue extraBold">
                 {about.title}
               </p>
-              <p className="text-[15px] sm:text-[17px] text-lightGrey regular">
+              <p className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[15px] sm:text-[17px] regular`}>
                 {about.text}
               </p>
             </div>

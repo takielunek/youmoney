@@ -7,6 +7,7 @@ export default {
       colors: {
         white: "#ffffff",
         superLightGrey: "#BBBFC3",
+        superLightGrey2: "#BBC6CE",
         lightGrey: "#415462",
         grey: "#24333E",
         darkGrey: "#1B2832",
@@ -22,6 +23,8 @@ export default {
         sky: "#bfdbfe",
         darkMode: "#11191f",
         darkModeText: "#edf0f3",
+        darkModeText2: "#d5dce2",
+        darkModeItemsBg: "#343b40"
       },
     },
     screens: {

@@ -4,11 +4,13 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import { FreeMode } from "swiper/modules";
 import { useWindowSize } from "./hooks.js";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const SwiperFreeMode = () => {
-const { width } = useWindowSize();
-const isDestkop = width >= 768;
+  const { theme } = useContext(ThemeContext);
+  const { width } = useWindowSize();
+  const isDestkop = width >= 768;
 
   return (
     <div>
@@ -23,7 +25,7 @@ const isDestkop = width >= 768;
             <SwiperSlide key={benefits.id}>
               <div
                 key={benefits.id}
-                className="my-[36px] mx-[18px] py-[45px] px-[30px] border-2 border-white rounded-xl benefitsShadow"
+                className={`${theme === "light" ? "bg-transparent" : "bg-darkModeItemsBg"} my-[36px] mx-[18px] py-[45px] px-[30px] rounded-xl benefitsShadow`}
               >
                 <div className="flex justify-around">
                   <img
@@ -32,7 +34,9 @@ const isDestkop = width >= 768;
                     alt="Grafika"
                   />
                 </div>
-                <p className="text-[16px] text-lightGrey mt-[36px] text-center">
+                <p
+                  className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[16px] md:text-[16px] mt-[36px] text-center`}
+                >
                   {benefits.title}
                 </p>
               </div>
@@ -50,7 +54,7 @@ const isDestkop = width >= 768;
             <SwiperSlide key={benefits.id}>
               <div
                 key={benefits.id}
-                className="my-[32px] mx-[16px] p-[25px] border-2 border-white rounded-xl benefitsShadow"
+                className={`${theme === "light" ? "bg-transparent" : "bg-darkModeItemsBg"} my-[36px] mx-[18px] py-[45px] px-[30px] rounded-xl benefitsShadow`}
               >
                 <div className="flex justify-around">
                   <img
@@ -59,7 +63,9 @@ const isDestkop = width >= 768;
                     alt="Grafika"
                   />
                 </div>
-                <p className="text-[16px] text-lightGrey mt-[36px] text-center">
+                <p
+                  className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[16px] md:text-[16px] mt-[36px] text-center`}
+                >
                   {benefits.title}
                 </p>
               </div>
@@ -69,6 +75,6 @@ const isDestkop = width >= 768;
       )}
     </div>
   );
-}
+};
 
-export default SwiperFreeMode
+export default SwiperFreeMode;

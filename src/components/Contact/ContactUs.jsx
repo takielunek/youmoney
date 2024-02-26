@@ -1,10 +1,17 @@
+import { useContext } from "react";
+import { ThemeContext } from "./../../App";
+
 const ContactUs = () => {
-const text = "text-[24px] text-grayish ubuntu-regular";
+  const { theme } = useContext(ThemeContext);
+
+  const text = "text-[24px] text-grayish ubuntu-regular";
 
   return (
     <section className="mb-[250px]">
       <div>
-        <h1 className="text-[40px] sm:text-[50px] bold text-grey mt-[20px] sm:mt-[50px] mb-[100px] sm:my-[100px]">
+        <h1
+          className={`${theme === "light" ? "text-grey" : "text-superLightGrey2"} text-[40px] sm:text-[50px] bold mt-[20px] sm:mt-[50px] mb-[100px] sm:my-[100px]`}
+        >
           Kontakt
         </h1>
 
@@ -22,7 +29,9 @@ const text = "text-[24px] text-grayish ubuntu-regular";
           </p>
         </div>
         <div className="text-center mb-[80px]">
-          <p className={`${text} mb-[27px]`}>
+          <p
+            className={`${text} ${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} mb-[27px] `}
+          >
             Kontakt z inspektorem Ochrony Danych Osobowych:
           </p>
           <a
@@ -33,7 +42,9 @@ const text = "text-[24px] text-grayish ubuntu-regular";
           </a>
         </div>
         <div className="text-center flex-col leading-relaxed">
-          <p className={`${text}`}>
+          <p
+            className={`${text} ${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"}`}
+          >
             Jeśli chcesz usunąć swoje dane i wycofać zgody, wyślij prośbę o
             usunięcie swoich danych:
           </p>
@@ -43,7 +54,9 @@ const text = "text-[24px] text-grayish ubuntu-regular";
           >
             https://nosms.pl/unsub
           </a>
-          <p className={`${text}`}>
+          <p
+            className={`${text} ${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"}`}
+          >
             lub skontaktuj się z nami na powyższy adres e-mail
           </p>
         </div>

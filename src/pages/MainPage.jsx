@@ -17,8 +17,6 @@ const MainPage = () => {
   const sectionsWrapper = "wrapper w-11/12 md:w-10/12 mx-auto ";
   const { theme } = useContext(ThemeContext);
 
-  console.log(theme);
-
   return (
     <div
       className={`${theme === "light" ? "bg-white" : "bg-darkMode"} relative`}
@@ -41,3 +39,5 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
+// {`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"}`}

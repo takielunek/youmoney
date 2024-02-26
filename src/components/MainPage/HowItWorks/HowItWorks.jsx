@@ -1,17 +1,24 @@
-import TextSection from "./TextSection"
+import TextSection from "./TextSection";
 import { itWorks } from "./index.js";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const HowItWorks = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <section className="wrapper w-11/12 md:w-10/12 mx-auto ">
       <TextSection />
       <div className="px-[30px]">
         <div className="text-center">
-          <h1 className="text-[30px] sm:text-[54px] bold text-grey">
+          <h1
+            className={`${theme === "light" ? "text-grey" : "text-superLightGrey2"} text-[30px] sm:text-[54px] bold`}
+          >
             Jak to działa?
           </h1>
-          <p className="text-[14px] sm:text-[20px] text-lightGrey regular">
+          <p
+            className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[14px] sm:text-[20px] regular`}
+          >
             Youmoney znajdzie najlepszą ofertę dla Ciebie.
           </p>
         </div>
@@ -25,14 +32,22 @@ const HowItWorks = () => {
                 <div className="flex sm:flex-col mt-[60px] mb-[10px] sm:mt-0 sm:mb-0">
                   <img
                     className="h-[46px] w-[46px] mr-[20px] sm:mb-[30px] sm:mr-0"
-                    src={itWorks.graphics}
+                    src={
+                      theme === "light"
+                        ? itWorks.graphics
+                        : itWorks.darkGraphics
+                    }
                     alt="Graphics"
                   />
-                  <p className="bold mb-[10px] mt-[10px] sm:mt-0 ">
+                  <p
+                    className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} bold mb-[10px] mt-[10px] sm:mt-0`}
+                  >
                     {itWorks.title}
                   </p>
                 </div>
-                <p className="text-[14px] sm:text-[17px] mb-[30px] regular">
+                <p
+                  className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[14px] sm:text-[17px] mb-[30px] regular`}
+                >
                   {" "}
                   {itWorks.text}
                 </p>
@@ -57,6 +72,6 @@ const HowItWorks = () => {
       </div>
     </section>
   );
-}
+};
 
-export default HowItWorks
+export default HowItWorks;

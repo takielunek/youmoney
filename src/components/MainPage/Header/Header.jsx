@@ -1,8 +1,12 @@
 import woman from "../../../assets/MainPage/bg/bg1.png";
 import Navbar from "../Navbar/Navbar";
 import Application from "./Application";
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Header = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <section>
       <div className="bg-header">
@@ -14,7 +18,9 @@ const Header = () => {
           >
             <div className="sm:flex sm:justify-between">
               <div className="uppercase bold w-1/2 z-10 relative mt-[18px]">
-                <p className="text-[32px] sm:text-[57.6px] text-grey">
+                <p
+                  className={`${theme === "light" ? "text-grey" : "text-darkModeText"} text-[32px] sm:text-[57.6px]`}
+                >
                   szybka <br /> pożyczka <br /> online
                 </p>
                 <p className="text-[27px] sm:text-[49px] underline text-blue -rotate-[7deg] absolute top-[130px] sm:top-[235px] left-[10px] sm:left-[15px] w-[200px] sm:w-[300px]">
