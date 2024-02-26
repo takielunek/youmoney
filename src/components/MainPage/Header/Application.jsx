@@ -36,12 +36,11 @@ const Application = () => {
           <p>60 dni</p>
         </div>
 
-        <div className="flex justify-around bg-blue py-[13.5px] px-[12px] rounded-xl mt-[36px] mb-[18px]">
-          <a
-            className="text-white text-[16px] sm:text-[18px] regular"
-            href="/step1"
-          >
-            <button>Wnioskuj o pożyczkę</button>
+        <div className="flex mt-[36px] mb-[18px] ">
+          <a href="/step1">
+            <button className="text-white text-[16px] sm:text-[18px] regular bg-blue py-[13.5px] px-[18px] rounded-xl hover:bg-darkGrey duration-300">
+              Wnioskuj o pożyczkę
+            </button>
           </a>
         </div>
         <div className="flex justify-around">
