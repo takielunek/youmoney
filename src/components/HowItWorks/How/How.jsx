@@ -29,7 +29,7 @@ const How = () => {
         <div className="xmd:w-3/4 xl:w-1/2 mx-auto text-center mt-[100px] mb-[150px]">
           <p className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} ubuntu-bold text-[20px] sm:text-[27px]`}>
             Wróć na{" "}
-            <span className="text-blue hover:text-black hover:underline duration-300 cursor-pointer">
+            <span className={`${theme === "light" ? "hover:text-darkGrey" : "hover:text-darkModeBlueButton"} text-blue hover:underline duration-300 cursor-pointer`}>
               youmoney.pl
             </span>{" "}
             po kolejną pożyczkę jeśli będziesz nadal potrzebować pieniędzy!

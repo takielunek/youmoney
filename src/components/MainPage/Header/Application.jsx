@@ -36,9 +36,11 @@ const Application = () => {
           <p>60 dni</p>
         </div>
 
-        <div className="flex mt-[36px] mb-[18px] ">
+        <div>
           <a href="/step1">
-            <button className="text-white text-[16px] sm:text-[18px] regular bg-blue py-[13.5px] px-[18px] rounded-xl hover:bg-darkGrey duration-300">
+            <button
+              className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} w-full mt-[36px] mb-[18px] text-white text-[16px] sm:text-[18px] regular bg-blue py-[13.5px] px-[18px] rounded-xl duration-300`}
+            >
               Wnioskuj o pożyczkę
             </button>
           </a>

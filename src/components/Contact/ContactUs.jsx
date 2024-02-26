@@ -35,7 +35,7 @@ const ContactUs = () => {
             Kontakt z inspektorem Ochrony Danych Osobowych:
           </p>
           <a
-            className="text-[30px] text-blue hover:text-black hover:underline duration-300 ubuntu-bold"
+            className={`${theme === "light" ? "hover:text-darkGrey" : "hover:text-darkModeBlueButton"} text-[30px] text-blue hover:underline duration-300 ubuntu-bold`}
             href="mailto:iod@findao.pl"
           >
             iod@findao.pl
@@ -49,7 +49,7 @@ const ContactUs = () => {
             usunięcie swoich danych:
           </p>
           <a
-            className="text-[24px] text-blue hover:text-black hover:underline duration-300 ubuntu-regular"
+            className={`${theme === "light" ? "hover:text-darkGrey" : "hover:text-darkModeBlueButton"} text-[24px] text-blue hover:underline duration-300 ubuntu-regular`}
             href="https://nosms.pl/unsub?fbclid=IwAR0BAKZlSmaI4pahwokex_TQ8Lcp8V2sT6q4UyQdH8gGVEyX09FdbtPdkhY"
           >
             https://nosms.pl/unsub

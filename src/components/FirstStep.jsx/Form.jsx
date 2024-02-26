@@ -2,23 +2,26 @@ import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
 import { stepOne } from "./index.js";
 import { useForm } from "react-hook-form";
-import privacy from "../../../assets/pdf/polityka_prywatnosci_findao.pdf";
-import regulations from "../../../assets/pdf/regulamin_findao.pdf";
+import privacy from "../../assets/pdf/polityka_prywatnosci_findao.pdf";
+import regulations from "../../assets/pdf/regulamin_findao.pdf";
+import { useContext } from "react";
+import { ThemeContext } from "./../../App";
 
 const Form = () => {
+  const { theme } = useContext(ThemeContext);
   const border =
-    "relative border-2 border-cream rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
+    "relative border-2 rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
   const label =
-    "absolute bg-white px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
+    "absolute px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
   const questionMark =
-    "bg-cream rounded-full h-[20px] w-[20px] hidden sm:block absolute right-[28px] translate-x-1/2 bottom-[50%] translate-y-1/2";
+    " rounded-full h-[20px] w-[20px] hidden sm:block absolute right-[28px] translate-x-1/2 bottom-[50%] translate-y-1/2";
   const speechBuble =
-    "absolute w-[204px] text-[12px] text-white text-center bg-grey rounded-md pt-[4px] pb-[8px] px-[8px] right-[28px] translate-x-1/2 bottom-[45px]";
+    "absolute w-[204px] text-[12px] text-center rounded-md pt-[4px] pb-[8px] px-[8px] right-[28px] translate-x-1/2 bottom-[45px]";
   const icon =
-    "absolute bottom-[33.3px] right-[28px] translate-x-1/2 text-grey";
+    "absolute bottom-[33.3px] right-[28px] translate-x-1/2 ";
   const gap = "flex gap-[9px]";
-  const input = "border-[2px] border-cream rounded-md h-[18px] w-[18px]";
-  const href = "text-blue hover:text-grayish duration-300";
+  const input = "border-[2px] rounded-md h-[18px] w-[18px] ";
+  const href = "text-blue duration-300";
 
   const [isHovered, setHovered] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -48,19 +51,25 @@ const Form = () => {
   return (
     <div className="w-full sm:w-[600px] mx-auto">
       <div>
-        <div className="shadow-xl rounded-xl mt-[36px] mb-[40px] sm:mb-[54px] py-[54px] px-[6%]">
+        <div
+          className={`${theme === "light" ? "bg-transparent" : "bg-darkModeBg"} shadow-xl rounded-xl mt-[36px] mb-[40px] sm:mb-[54px] py-[54px] px-[6%] `}
+        >
           <div className="flex flex-col text-[18px] gap-[18px]">
             {stepOne.map((stepOne) => (
               <div key={stepOne.id} className="relative z-0">
-                <div className={`${label} z-10`}>
-                  <label className="text-grayish text-[14px]">
+                <div
+                  className={`${theme === "light" ? " bg-white" : " bg-darkModeBg"} ${label} z-10`}
+                >
+                  <label
+                    className={`${theme === "light" ? "text-grayish " : "text-superLightGrey2 "} text-[14px]`}
+                  >
                     {stepOne.text}
                   </label>
                 </div>
                 <input
                   type="tel"
                   placeholder={stepOne.placeholder}
-                  className={`${border}`}
+                  className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border}`}
                   {...register("data", { required: true })}
                   style={
                     errors.data && {
@@ -75,7 +84,7 @@ const Form = () => {
                   </span>
                 )}
                 <div
-                  className={`${questionMark}`}
+                  className={`${theme === "light" ? " bg-cream" : " bg-darkGrayish"} ${questionMark}`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   style={
@@ -84,26 +93,34 @@ const Form = () => {
                     }
                   }
                 >
-                  <p className="text-[12px] text-grayish grid place-content-center">
+                  <p
+                    className={`${theme === "light" ? " text-grayish" : " text-superLightGrey2"} text-[12px] grid place-content-center`}
+                  >
                     ?
                   </p>
                 </div>
                 {isHovered && (
                   <div>
-                    <div className={`${speechBuble}`}>{stepOne.speech}</div>
-                    <AiFillCaretDown className={`${icon}`} />
+                    <div
+                      className={`${theme === "light" ? " text-white bg-grey" : " bg-superLightGrey2 text-grey"} ${speechBuble}`}
+                    >
+                      {stepOne.speech}
+                    </div>
+                    <AiFillCaretDown
+                      className={`${theme === "light" ? " text-grey" : " text-superLightGrey2"} ${icon}`}
+                    />
                   </div>
                 )}
               </div>
             ))}
             {/* checkbox  */}
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="flex flex-col gap-[4.5px] text-[13px] text-grayish">
+              <div className={`${theme === "light" ? "text-grayish" : "text-superLightGrey2"} flex flex-col gap-[4.5px] text-[13px] `}>
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
                     value="all"
-                    className={`${input}`}
+                    className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                     {...register("selectAll")}
                   />
                   <label className="font-bold">
@@ -114,7 +131,7 @@ const Form = () => {
                   <input
                     type="checkbox"
                     value="privacy"
-                    className={`${input}`}
+                    className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                     checked={selectAll}
                     {...register("accepts", {
                       required: { value: true, message: "Nie wyrażono zgody" },
@@ -130,7 +147,7 @@ const Form = () => {
                     Potwierdzam, że zapoznałem się{" "}
                     <a
                       href={regulations}
-                      className={`${href}`}
+                      className={`${theme === "light" ? "hover:text-grayish" : "hover:text-darkModeBlueButton"} ${href}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -139,7 +156,7 @@ const Form = () => {
                     oraz{" "}
                     <a
                       href={privacy}
-                      className={`${href}`}
+                      className={`${theme === "light" ? "hover:text-grayish" : "hover:text-darkModeBlueButton"} ${href}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -152,7 +169,7 @@ const Form = () => {
                   <input
                     type="checkbox"
                     value="information"
-                    className={`${input}`}
+                    className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                     checked={selectAll}
                     {...register("accepts", {
                       required: { value: true, message: "Nie wyrażono zgody" },
@@ -182,13 +199,16 @@ const Form = () => {
                             usług własnych w formie:
                           </p>
                           <div>
-                            <input type="checkbox" className={`${input}`} />{" "}
+                            <input
+                              type="checkbox"
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                            />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
                           <div className={`${gap} ml-[25px]`}>
                             <input
                               type="checkbox"
-                              className={`${input}`}
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("accepts", {
                                 required: {
                                   value: true,
@@ -210,7 +230,7 @@ const Form = () => {
                           <div className={`${gap} ml-[25px]`}>
                             <input
                               type="checkbox"
-                              className={`${input}`}
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("accepts", {
                                 required: {
                                   value: true,
@@ -238,13 +258,16 @@ const Form = () => {
                             adresem w formie:
                           </p>
                           <div>
-                            <input type="checkbox" className={`${input}`} />{" "}
+                            <input
+                              type="checkbox"
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                            />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
                           <div className={`${gap} ml-[25px]`}>
                             <input
                               type="checkbox"
-                              className={`${input}`}
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("accepts", {
                                 required: {
                                   value: true,
@@ -266,7 +289,7 @@ const Form = () => {
                           <div className={`${gap} ml-[25px]`}>
                             <input
                               type="checkbox"
-                              className={`${input}`}
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("accepts", {
                                 required: {
                                   value: true,
@@ -288,7 +311,7 @@ const Form = () => {
                           <div className={`${gap} ml-[25px]`}>
                             <input
                               type="checkbox"
-                              className={`${input}`}
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("accepts", {
                                 required: {
                                   value: true,
@@ -310,7 +333,7 @@ const Form = () => {
                           <div className={`${gap} ml-[25px]`}>
                             <input
                               type="checkbox"
-                              className={`${input}`}
+                              className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("accepts", {
                                 required: {
                                   value: true,
@@ -348,12 +371,12 @@ const Form = () => {
                   </label>
                 </div>
               </div>
-              <div className=" ">
+              <div>
                 <a href="/step2">
                   <button
                     type="submit"
                     value="submit"
-                    className="text-white text-[18px] font-bold py-[13.5px] bg-blue w-full mt-[20px] rounded-2xl hover:bg-darkGrey duration-300"
+                    className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} text-white text-[18px] font-bold py-[13.5px] bg-blue w-full mt-[20px] rounded-2xl hover:bg-darkGrey duration-300`}
                   >
                     Dalej
                   </button>

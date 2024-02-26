@@ -14,7 +14,7 @@ const CollaborationWithUs = () => {
           Kontakt z nami:
         </p>
         <a
-          className="text-[30px] text-blue hover:text-black hover:underline duration-300 ubuntu-bold"
+          className={`${theme === "light" ? "hover:text-darkGrey" : "hover:text-darkModeBlueButton"} text-[30px] text-blue  hover:underline duration-300 ubuntu-bold`}
           href="mailto:kontakt@findao.pl"
         >
           kontakt@findao.pl

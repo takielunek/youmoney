@@ -24,7 +24,10 @@ export default {
         darkMode: "#11191f",
         darkModeText: "#edf0f3",
         darkModeText2: "#d5dce2",
-        darkModeItemsBg: "#343b40"
+        darkModeItemsBg: "#343b40",
+        darkModeBg: "#141e26",
+        darkModeBlueButton: "#19b3e6",
+        darkModeBorderColor: "#374956"
       },
     },
     screens: {

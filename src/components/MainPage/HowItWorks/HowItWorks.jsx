@@ -65,7 +65,7 @@ const HowItWorks = () => {
       </div>
       <div className="flex justify-around my-[85px]">
         <a href="#header">
-          <button className="px-[45px] py-[20px] bg-blue text-white medium text-[16px] sm:text-[18px] rounded-2xl hover:bg-darkGrey duration-300">
+          <button className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} px-[45px] py-[20px] bg-blue text-white medium text-[16px] sm:text-[18px] rounded-2xl duration-300`}>
             Weź pożyczkę teraz!
           </button>
         </a>

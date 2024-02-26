@@ -1,12 +1,16 @@
 import money from "../../../assets/MainPage/other/money.svg";
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const LoanButton = () => {
+    const { theme } = useContext(ThemeContext);
+
   return (
     <div>
       <a href="/step1">
         <button
           id="toTopLink"
-          className="z-40 hidden fixed bottom-[16px] right-[80px] bg-blue hover:bg-darkBlue duration-500 text-white ubuntu-medium text-[16px] px-[48px] py-[10px] border-2 border-white rounded-xl"
+          className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} z-40 hidden fixed bottom-[16px] right-[80px] bg-blue duration-500 text-white ubuntu-medium text-[16px] px-[48px] py-[10px] border-2 border-white rounded-xl`}
         >
           Weź pożyczkę{" "}
           <div className="relative">
