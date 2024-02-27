@@ -185,13 +185,13 @@ const Form = () => {
                     Chcę dostawać od Youmoney.pl i partnerów najnowsze i
                     dopasowane do moich potrzeb informacje o produktach i
                     usługach.{" "}
-                    {toggle === false ? (
+                    {toggle ? (
                       <span onClick={handleToggle} className="cursor-pointer">
                         [ROZWIŃ]
                       </span>
                     ) : (
-                      <div onClick={handleToggle} className="grid gap-[4px]">
-                        <span className="cursor-pointer">[ZWIŃ]</span>
+                      <div  className="grid gap-[4px]">
+                        <span onClick={handleToggle} className="cursor-pointer">[ZWIŃ]</span>
                         <div className="grid gap-[4px]">
                           <p>
                             Wyrażam zgodę na przesyłanie przez Findao sp. z o.o.
