@@ -1,15 +1,18 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
+import lightVector from "../../../assets/MainPage/bg/lightVector.png";
+import darkVector from "../../../assets/MainPage/bg/darkVector.png";
+
 
 const SendFeedback = () => {
   const { theme } = useContext(ThemeContext);
 
   const placeholder =
-    "text-[15px] md:text-[20px] border-2 border-cream rounded-2xl text-cream light px-[17px] py-[13px]";
+    "border-[1px] border-cream rounded-2xl text-cream light px-[17px] py-[13px] ";
 
   return (
-    <div className="flex justify-center px-[10px] xs:px-[30px] sm:px-0 sm:w-[40%]">
-      <div className="w-11/12 ss:w-2/3 sm:w-11/12 flex flex-col border-2 border-white bg-white rounded-xl mb-[25.5px] py-[45px] px-[30px] bgShadow">
+    <div className="flex justify-center px-[10px] xs:px-[30px] sm:px-0 sm:w-[40%] relative">
+      <div className="z-10 w-11/12 ss:w-2/3 sm:w-11/12 flex flex-col border-2 border-white bg-white rounded-xl mb-[25.5px] py-[45px] px-[30px] bgShadow">
         <p className="text-[20px] sm:text-[22px] md:text-[23.4px] bold text-grey mb-[17px] ">
           Zostaw swoją opinię
         </p>
@@ -31,6 +34,11 @@ const SendFeedback = () => {
           </button>
         </div>
       </div>
+      <img
+        src={theme === "light" ? lightVector : darkVector}
+        alt="blue vector"
+        className="absolute z-0 -top-[180px] -right-[250px] h-[700px] rotate-180"
+      />
     </div>
   );
 };
