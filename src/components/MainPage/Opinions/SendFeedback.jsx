@@ -17,12 +17,12 @@ const SendFeedback = () => {
           Zostaw swoją opinię
         </p>
         <input
-          className={`${placeholder} mb-[15px]`}
+          className={`${placeholder} mb-[15px] input`}
           type="text"
           placeholder="Podaj swoje imię i nazwisko"
         />
         <textarea
-          className={`${placeholder} `}
+          className={`${placeholder} input`}
           placeholder="Podaj swój komentarz..."
           rows="4"
         ></textarea>

@@ -74,7 +74,7 @@ const DeleteYourData = () => {
                     type="tel"
                     placeholder={data.placeholder}
                     {...register("data", { required: true })}
-                    className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border}`}
+                    className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
                     style={
                       errors.data && {
                         border: "1px solid red",

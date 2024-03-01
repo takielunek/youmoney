@@ -69,7 +69,7 @@ const Form = () => {
                 <input
                   type="tel"
                   placeholder={stepOne.placeholder}
-                  className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border}`}
+                  className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
                   {...register("data", { required: true })}
                   style={
                     errors.data && {
@@ -115,7 +115,9 @@ const Form = () => {
             ))}
             {/* checkbox  */}
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className={`${theme === "light" ? "text-grayish" : "text-superLightGrey2"} flex flex-col gap-[4.5px] text-[13px] `}>
+              <div
+                className={`${theme === "light" ? "text-grayish" : "text-superLightGrey2"} flex flex-col gap-[4.5px] text-[13px] `}
+              >
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
@@ -186,12 +188,10 @@ const Form = () => {
                     dopasowane do moich potrzeb informacje o produktach i
                     usługach.{" "}
                     {toggle ? (
-                      <span onClick={handleToggle} className="cursor-pointer">
-                        [ROZWIŃ]
-                      </span>
-                    ) : (
-                      <div  className="grid gap-[4px]">
-                        <span onClick={handleToggle} className="cursor-pointer">[ZWIŃ]</span>
+                      <div className="grid gap-[4px]">
+                        <span onClick={handleToggle} className="cursor-pointer">
+                          [ZWIŃ]
+                        </span>
                         <div className="grid gap-[4px]">
                           <p>
                             Wyrażam zgodę na przesyłanie przez Findao sp. z o.o.
@@ -367,6 +367,10 @@ const Form = () => {
                           </p>
                         </div>
                       </div>
+                    ) : (
+                      <span onClick={handleToggle} className="cursor-pointer">
+                        [ROZWIŃ]
+                      </span>
                     )}
                   </label>
                 </div>
