@@ -3,9 +3,47 @@ import TermsOfTheLoan from "./TermsOfTheLoan";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
 import Slider from "@mui/material/Slider";
+import { useState, useEffect } from "react";
 
 const Application = () => {
   const { theme } = useContext(ThemeContext);
+
+  const [price, setPrice] = useState(2000);
+
+  const handlePriceChange = (event, newValue) => {
+    setPrice(newValue);
+  };
+
+  const [day, setDay] = useState(30);
+  const [repaymentDate, setRepaymentDate] = useState();
+
+  useEffect(() => {
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString("pl-PL", {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    });
+    setRepaymentDate(formattedDate);
+  }, []);
+
+  const handleDayChange = (event, newValue) => {
+    setDay(newValue);
+    setRepaymentDate(calculateRepaymentDate(newValue));
+  };
+
+  const calculateRepaymentDate = (selectedDay) => {
+    const currentDate = new Date();
+    const repaymentDate = new Date(
+      currentDate.setDate(currentDate.getDate() + selectedDay),
+    );
+    const formattedDate = repaymentDate.toLocaleDateString("pl-PL", {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    });
+    return formattedDate;
+  };
 
   return (
     <div className="w-full sm:w-[79%] sm:float-right">
@@ -18,7 +56,9 @@ const Application = () => {
           >
             Ile chcesz pożyczyć?
           </p>
-          <p className="text-blue text-[21px] sm:text-[30px] bold">2000 zł</p>
+          <p className="text-blue text-[21px] sm:text-[30px] bold">
+            {price} zł
+          </p>
         </div>
 
         <Slider
@@ -28,6 +68,7 @@ const Application = () => {
           min={100}
           max={10000}
           step={100}
+          onChange={handlePriceChange}
         />
 
         <div className="flex justify-between text-superLightGrey text-[15px] light mb-[10px]">
@@ -40,7 +81,7 @@ const Application = () => {
           >
             Na ile czasu?
           </p>
-          <p className="text-blue text-[21px] sm:text-[30px] bold">30 dni</p>
+          <p className="text-blue text-[21px] sm:text-[30px] bold">{day} dni</p>
         </div>
 
         <Slider
@@ -49,7 +90,7 @@ const Application = () => {
           valueLabelDisplay="off"
           min={15}
           max={60}
-          step={1}
+          onChange={handleDayChange}
         />
 
         <div className="flex justify-between text-superLightGrey text-[15px] light">
@@ -81,11 +122,11 @@ const Application = () => {
       >
         <div className="flex w-full sm:w-[50%] justify-center">
           <p className="mr-2 regular">Kwota do spłaty:</p>
-          <p className="bold">4800 zł</p>
+          <p className="bold">{price} zł</p>
         </div>
         <div className="flex w-full sm:w-[50%] justify-center">
           <p className="mr-2 regular">Data spłaty:</p>
-          <p className="bold">18.02.2024</p>
+          <p className="bold">{repaymentDate}</p>
         </div>
       </div>
 
