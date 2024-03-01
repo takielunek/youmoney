@@ -2,6 +2,7 @@ import bulb from "../../../assets/MainPage/other/bulb.svg";
 import TermsOfTheLoan from "./TermsOfTheLoan";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
+import Slider from "@mui/material/Slider";
 
 const Application = () => {
   const { theme } = useContext(ThemeContext);
@@ -9,7 +10,7 @@ const Application = () => {
   return (
     <div className="w-full sm:w-[79%] sm:float-right">
       <div
-        className={`${theme === "light" ? "bg-white" : "bg-transparent"} px-[30px] sm:px-[35px] py-[20px] sm:py-[25px] rounded-2xl sm:h-[396px]`}
+        className={`${theme === "light" ? "bg-white" : "bg-transparent"} px-[30px] sm:px-[35px] py-[20px] sm:py-[25px] rounded-2xl`}
       >
         <div className="flex justify-between">
           <p
@@ -19,7 +20,17 @@ const Application = () => {
           </p>
           <p className="text-blue text-[21px] sm:text-[30px] bold">2000 zł</p>
         </div>
-        <div className="flex justify-between text-superLightGrey text-[15px] light">
+
+        <Slider
+          defaultValue={2000}
+          aria-label="Default"
+          valueLabelDisplay="off"
+          min={100}
+          max={10000}
+          step={100}
+        />
+
+        <div className="flex justify-between text-superLightGrey text-[15px] light mb-[10px]">
           <p>100 zł</p>
           <p>10 000 zł</p>
         </div>
@@ -31,6 +42,16 @@ const Application = () => {
           </p>
           <p className="text-blue text-[21px] sm:text-[30px] bold">30 dni</p>
         </div>
+
+        <Slider
+          defaultValue={30}
+          aria-label="Default"
+          valueLabelDisplay="off"
+          min={15}
+          max={60}
+          step={1}
+        />
+
         <div className="flex justify-between text-superLightGrey text-[15px] light">
           <p>15 dni</p>
           <p>60 dni</p>

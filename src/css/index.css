@@ -93,17 +93,32 @@ body {
 }
 
 .blueShadow {
-      content: '';
-    width: 400px;
-    height: 400px;
-    background: var(--primary);
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(5.5rem);
-    opacity: 0.3;
-    z-index: -1;
-    right: 6rem;
-    top: 5rem;
+  content: "";
+  width: 400px;
+  height: 400px;
+  background: var(--primary);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5.5rem);
+  opacity: 0.3;
+  z-index: -1;
+  right: 6rem;
+  top: 5rem;
+}
+
+.MuiSlider-track {
+  color: #247bf6;
+  padding: 3px;
+}
+
+.MuiSlider-rail {
+  color: #d5dce2;
+  padding: 3px;
+}
+
+.MuiSlider-thumb {
+  color: #247bf6;
+  padding: 17px;
 }
 
 /* light / dark mode style  */
