@@ -4,7 +4,7 @@ import close from "../../../assets/MainPage/other/close.svg";
 const Modal = ({ closeModal }) => {
 
   return (
-    <div className="bg-blue w-[100%] h-[100%]">
+    <div className="w-[100%] h-[100%]">
       <div className="absolute bg-white px-[27px] pt-[40px] pb-[57px] w-2/3 rounded-xl bottom-[50%] right-[50%] translate-x-1/2">
         <div className="flex justify-end">
           <img
