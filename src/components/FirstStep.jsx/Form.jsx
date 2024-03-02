@@ -42,6 +42,7 @@ const Form = () => {
                 key={stepOne.id}
                 placeholder={stepOne.placeholder}
                 text={stepOne.text}
+                speech={stepOne.speech}
                 message={stepOne.message}
               />
             ))}

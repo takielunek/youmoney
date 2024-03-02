@@ -8,7 +8,7 @@ import { ThemeContext } from "./../../App";
 
 
 // eslint-disable-next-line react/prop-types
-const Input = ({ placeholder, text, message }) => {
+const Input = ({ placeholder, text, speech, message }) => {
   const { theme } = useContext(ThemeContext);
   const border =
     "relative border-2 rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
@@ -79,7 +79,7 @@ const Input = ({ placeholder, text, message }) => {
           <div
             className={`${theme === "light" ? " text-white bg-grey" : " bg-superLightGrey2 text-grey"} ${speechBuble}`}
           >
-            {stepOne.speech}
+            {speech}
           </div>
           <AiFillCaretDown
             className={`${theme === "light" ? " text-grey" : " text-superLightGrey2"} ${icon}`}
