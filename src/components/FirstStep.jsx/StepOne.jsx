@@ -3,12 +3,16 @@ import lightLogo from "../../assets/MainPage/logo/lightLogo.svg";
 import Navbar from "./Navbar/Navbar";
 import Form from "./Form";
 import Progress from "./Progress";
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import { ThemeContext } from "./../../App";
 
 const StepOne = () => {
   const { theme } = useContext(ThemeContext);
   const currentYear = new Date().getFullYear();
+
+    useEffect(() => {
+      document.title = "Krok 1 - Wniosek Youmoney";
+    }, []);
 
   return (
     <section className="border-b-[8px] border-blue">

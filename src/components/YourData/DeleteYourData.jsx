@@ -1,25 +1,26 @@
 import darkLogo from "./../../assets/MainPage/logo/darkLogo.svg";
 import lightLogo from "./../../assets/MainPage/logo/lightLogo.svg";
 import { AiFillCaretDown } from "react-icons/ai";
-import { useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { data } from "./index.js";
 import { useForm } from "react-hook-form";
-import { useContext } from "react";
 import { ThemeContext } from "./../../App";
 
 const DeleteYourData = () => {
-   const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.title = "Wypisanie z subskrypcji Youmoney";
+  }, []);
 
   const border =
     "relative border-1 rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
-  const label =
-    "absolute px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
+  const label = "absolute px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
   const questionMark =
     "rounded-full h-[20px] w-[20px] hidden sm:block absolute right-[28px] translate-x-1/2 bottom-[50%] translate-y-1/2";
   const speechBuble =
     "absolute w-[204px] text-[12px] text-center rounded-md py-[5px] px-[25px] right-[28px] translate-x-1/2 bottom-[45px]";
-  const icon =
-    "absolute bottom-[33.3px] right-[28px] translate-x-1/2";
+  const icon = "absolute bottom-[33.3px] right-[28px] translate-x-1/2";
 
   const [isHovered, setHovered] = useState(false);
 
@@ -37,7 +38,7 @@ const DeleteYourData = () => {
     formState: { errors },
   } = useForm();
 
-    const onSubmit = (data) => alert(JSON.stringify(data))
+  const onSubmit = (data) => alert(JSON.stringify(data));
 
   return (
     <section className="w-full sm:w-[600px] mx-auto">

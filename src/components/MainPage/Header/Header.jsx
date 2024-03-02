@@ -7,6 +7,8 @@ import { ThemeContext } from "../../../App";
 const Header = () => {
   const { theme } = useContext(ThemeContext);
 
+
+  
   return (
     <section>
       <div className="bg-header">

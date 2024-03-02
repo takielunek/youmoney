@@ -120,15 +120,15 @@ body {
 }
 
 .input::placeholder {
-   color: #BBBFC3; 
+  color: #bbbfc3;
 }
 
-#light .input:focus {
-   color: red; 
+#dark .input {
+  color: #bbbfc3;
 }
 
 #dark .input:focus {
-   color: #BBBFC3; 
+  color: #bbbfc3;
 }
 
 .MuiSlider-track {
@@ -145,4 +145,3 @@ body {
   color: #247bf6;
   padding: 17px;
 }
-
