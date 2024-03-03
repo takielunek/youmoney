@@ -1,11 +1,8 @@
-
 import { AiFillCaretDown } from "react-icons/ai";
 import { stepOne } from "./index.js";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from "react";
 import { ThemeContext } from "./../../App";
-
-
 
 // eslint-disable-next-line react/prop-types
 const Input = ({ placeholder, text, speech, message }) => {
@@ -90,4 +87,4 @@ const Input = ({ placeholder, text, speech, message }) => {
   );
 };
 
-export default Input
+export default Input;

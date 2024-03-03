@@ -4,7 +4,6 @@ import { data } from "./index.js";
 import { useForm } from "react-hook-form";
 import { ThemeContext } from "./../../App";
 
-
 const border =
   "relative border-1 rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
 const label = "absolute px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
@@ -13,8 +12,6 @@ const questionMark =
 const speechBuble =
   "absolute w-[204px] text-[12px] text-center rounded-md py-[5px] px-[25px] right-[28px] translate-x-1/2 bottom-[45px]";
 const icon = "absolute bottom-[33.3px] right-[28px] translate-x-1/2";
-
-
 
 // eslint-disable-next-line react/prop-types
 const Input = ({ placeholder, text, message }) => {
@@ -58,9 +55,7 @@ const Input = ({ placeholder, text, message }) => {
           }
         }
       />
-      {errors.data && (
-        <span className="text-red text-[12px]">{message}</span>
-      )}
+      {errors.data && <span className="text-red text-[12px]">{message}</span>}
       <div
         className={`${theme === "light" ? " bg-cream" : " bg-darkGrayish"} ${questionMark}`}
         onMouseEnter={handleMouseEnter}

@@ -1,29 +1,14 @@
 // import { useState, useEffect } from "react";
 import darkLogo from "../../../assets/MainPage/logo/darkLogo.svg";
 import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../../../App";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
 
-   const [isNavFixed, setIsNavFixed] = useState(false);
-
-   useEffect(() => {
-     const handleScroll = () => {
-       if (window.scrollY > 84) {
-         setIsNavFixed(true);
-       } else {
-         setIsNavFixed(false);
-       }
-     };
-
-     window.addEventListener("scroll", handleScroll);
-
-   }, []);
-
   return (
-    <section className={`${isNavFixed ? "navbar fixed bg-white" : "navbar"} z-50`}>
+    <section >
       <div className="bg-transparent">
         <div className="flex justify-between py-[15px] medium">
           <a href="/">

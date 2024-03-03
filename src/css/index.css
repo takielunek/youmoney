@@ -145,3 +145,8 @@ body {
   color: #247bf6;
   padding: 17px;
 }
+
+.modal {
+  background: rgba(213, 220, 226, 0.8);
+
+}

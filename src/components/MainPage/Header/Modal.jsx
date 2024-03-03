@@ -1,19 +1,21 @@
 import close from "../../../assets/MainPage/other/close.svg";
 
 // eslint-disable-next-line react/prop-types
-const Modal = ({ closeModal }) => {
+const Modal = ({ open, onClose }) => {
+    if (!open) return null;
 
   return (
-    <div className="w-[100%] h-[100%]">
-      <div className="absolute bg-white px-[27px] pt-[40px] pb-[57px] w-2/3 rounded-xl bottom-[50%] right-[50%] translate-x-1/2">
+    <div
+      className="fixed top-0 bottom-0 right-0 left-0 modal"
+      onClick={onClose}
+    >
+      <div className="absolute bg-white px-[27px] pt-[40px] pb-[57px] w-[37%] rounded-xl bottom-[50%] right-[50%] translate-x-1/2">
         <div className="flex justify-end">
           <img
             className="mb-[25px] h-[17px] cursor-pointer"
             src={close}
             alt="Close icon"
-            onClick={() => {
-              closeModal(false);
-            }}
+            onClick={onClose}
           />
         </div>
         <p className="text-[15px] regular text-center">
