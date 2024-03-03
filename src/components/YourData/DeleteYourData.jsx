@@ -13,7 +13,11 @@ const DeleteYourData = () => {
     document.title = "Wypisanie z subskrypcji Youmoney";
   }, []);
 
-  const { handleSubmit } = useForm();
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+    } = useForm();
 
   const onSubmit = (data) => alert(JSON.stringify(data));
 
@@ -43,6 +47,8 @@ const DeleteYourData = () => {
                   placeholder={data.placeholder}
                   text={data.text}
                   message={data.message}
+                  register={register}
+                  errors={errors}
                 />
               ))}
               <div>

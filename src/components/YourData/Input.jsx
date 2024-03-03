@@ -1,7 +1,6 @@
 import { AiFillCaretDown } from "react-icons/ai";
 import { useState, useContext } from "react";
 import { data } from "./index.js";
-import { useForm } from "react-hook-form";
 import { ThemeContext } from "./../../App";
 
 const border =
@@ -14,7 +13,7 @@ const speechBuble =
 const icon = "absolute bottom-[33.3px] right-[28px] translate-x-1/2";
 
 // eslint-disable-next-line react/prop-types
-const Input = ({ placeholder, text, message }) => {
+const Input = ({ placeholder, text, message, errors, register }) => {
   const { theme } = useContext(ThemeContext);
 
   const [isHovered, setHovered] = useState(false);
@@ -26,11 +25,6 @@ const Input = ({ placeholder, text, message }) => {
   const handleMouseLeave = () => {
     setHovered(false);
   };
-
-  const {
-    register,
-    formState: { errors },
-  } = useForm();
 
   return (
     <div key={data.id} className="relative z-0">
@@ -46,22 +40,24 @@ const Input = ({ placeholder, text, message }) => {
       <input
         type="tel"
         placeholder={placeholder}
-        {...register("data", { required: true })}
+        {...register(text, { required: true })}
         className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
         style={
-          errors.data && {
+          errors && {
             border: "1px solid red",
             boxShadow: "none",
           }
         }
       />
-      {errors.data && <span className="text-red text-[12px]">{message}</span>}
+      {Object.hasOwn(errors, text) && (
+        <span className="text-red text-[12px]">{message}</span>
+      )}
       <div
         className={`${theme === "light" ? " bg-cream" : " bg-darkGrayish"} ${questionMark}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={
-          errors.data && {
+          errors && {
             bottom: "65%",
           }
         }
