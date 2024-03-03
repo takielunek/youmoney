@@ -44,6 +44,8 @@ const Form = () => {
                 text={stepOne.text}
                 speech={stepOne.speech}
                 message={stepOne.message}
+                register={register}
+                errors={errors}
               />
             ))}
             {/* checkbox  */}

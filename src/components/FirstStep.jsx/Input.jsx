@@ -1,11 +1,10 @@
 import { AiFillCaretDown } from "react-icons/ai";
 import { stepOne } from "./index.js";
-import { useForm } from "react-hook-form";
 import { useState, useContext } from "react";
 import { ThemeContext } from "./../../App";
 
 // eslint-disable-next-line react/prop-types
-const Input = ({ placeholder, text, speech, message }) => {
+const Input = ({ placeholder, text, speech, message, errors, register }) => {
   const { theme } = useContext(ThemeContext);
   const border =
     "relative border-2 rounded-2xl px-[18px] py-[13.5px] focus outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky";
@@ -26,11 +25,6 @@ const Input = ({ placeholder, text, speech, message }) => {
     setHovered(false);
   };
 
-  const {
-    register,
-    formState: { errors },
-  } = useForm();
-
   return (
     <div key={stepOne.id} className="relative z-0">
       <div
@@ -46,21 +40,23 @@ const Input = ({ placeholder, text, speech, message }) => {
         type="tel"
         placeholder={placeholder}
         className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
-        {...register("data", { required: true })}
+        {...register(text, { required: true })}
         style={
-          errors.data && {
+          errors && {
             border: "1px solid red",
             boxShadow: "none",
           }
         }
       />
-      {errors.data && <span className="text-red text-[12px]">{message}</span>}
+      {Object.hasOwn(errors, text) && (
+        <span className="text-red text-[12px]">{message}</span>
+      )}
       <div
         className={`${theme === "light" ? " bg-cream" : " bg-darkGrayish"} ${questionMark}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={
-          errors.data && {
+          errors && {
             bottom: "65%",
           }
         }
