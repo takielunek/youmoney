@@ -43,10 +43,11 @@ const Input = ({ placeholder, text, message, errors, register }) => {
         {...register(text, { required: true })}
         className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
         style={
-          Object.hasOwn && {
-            border: "1px solid red",
+          Object.hasOwn(errors,text) ? {
+           border: "1px solid red",
             boxShadow: "none",
-          }
+          } : {}
+       
         }
       />
       {Object.hasOwn(errors, text) && (
@@ -57,9 +58,11 @@ const Input = ({ placeholder, text, message, errors, register }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={
-          Object.hasOwn && {
-            bottom: "65%",
-          }
+          Object.hasOwn(errors, text)
+            ? {
+                bottom: "65%",
+              }
+            : {}
         }
       >
         <p

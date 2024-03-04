@@ -21,14 +21,31 @@ const Form = () => {
   };
 
   const {
+    control,
     register,
     handleSubmit,
     watch,
     formState: { errors },
+    setValue,
   } = useForm();
 
+
+  const handleSelectAll = (e) => {
+    const isChecked = e.target.checked;
+    setValue("selectAll", isChecked);
+    setValue("1_1", isChecked); // Set lower checkbox value based on higher checkbox
+  };
+
+  const handle1_1 = (e) => {
+    setValue("1_1", e.target.checked);
+  };
+
   const selectAll = watch("selectAll");
+  // const accepts = watch("accepts");
+  const accepts = watch();
   const onSubmit = (data) => alert(JSON.stringify(data));
+  // console.log(selectAll);
+  console.log(accepts);
 
   return (
     <div className="w-full sm:w-[600px] mx-auto">
@@ -56,10 +73,12 @@ const Form = () => {
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
-                    value="all"
+                    onChange={handleSelectAll}
+                    ref={control.register}
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                     {...register("selectAll")}
                   />
+
                   <label className="font-bold">
                     Akceptuję wszystkie zgody i oświadczenia
                   </label>
@@ -67,10 +86,12 @@ const Form = () => {
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
-                    value="privacy"
+                    // value="privacy"
+                    ref={control.register}
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                     checked={selectAll}
-                    {...register("accepts", {
+                    onChange={handle1_1}
+                    {...register("1_1", {
                       required: { value: true, message: "Nie wyrażono zgody" },
                     })}
                   />
@@ -81,7 +102,7 @@ const Form = () => {
                         {errors.accepts.message}
                       </span>
                     )}
-                    Potwierdzam, że zapoznałem się{" "}
+                    Potwierdzam, że zapoznałem się z{" "}
                     <a
                       href={regulations}
                       className={`${theme === "light" ? "hover:text-grayish" : "hover:text-darkModeBlueButton"} ${href}`}
@@ -105,10 +126,10 @@ const Form = () => {
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
-                    value="information"
+                    // value="information"
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                     checked={selectAll}
-                    {...register("accepts", {
+                    {...register("1_2", {
                       required: { value: true, message: "Nie wyrażono zgody" },
                     })}
                   />
@@ -137,6 +158,12 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                              {...register("1_2_1", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
                             />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
@@ -144,7 +171,7 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("accepts", {
+                              {...register("1_2_1_1", {
                                 required: {
                                   value: true,
                                   message: "Nie wyrażono zgody",
@@ -166,7 +193,7 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("accepts", {
+                              {...register("1_2_1_2", {
                                 required: {
                                   value: true,
                                   message: "Nie wyrażono zgody",
@@ -196,6 +223,12 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                              {...register("1_2_2", {
+                                required: {
+                                  value: true,
+                                  message: "Nie wyrażono zgody",
+                                },
+                              })}
                             />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
@@ -203,7 +236,7 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("accepts", {
+                              {...register("1_2_2_1", {
                                 required: {
                                   value: true,
                                   message: "Nie wyrażono zgody",
@@ -225,7 +258,7 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("accepts", {
+                              {...register("1_2_2_2", {
                                 required: {
                                   value: true,
                                   message: "Nie wyrażono zgody",
@@ -247,7 +280,7 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("accepts", {
+                              {...register("1_2_2_3", {
                                 required: {
                                   value: true,
                                   message: "Nie wyrażono zgody",
@@ -269,7 +302,7 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("accepts", {
+                              {...register("1_2_2_4", {
                                 required: {
                                   value: true,
                                   message: "Nie wyrażono zgody",

@@ -6,6 +6,7 @@ import Progress from "./Progress";
 import { useEffect, useContext } from "react";
 import { ThemeContext } from "./../../App";
 
+
 const StepOne = () => {
   const { theme } = useContext(ThemeContext);
   const currentYear = new Date().getFullYear();

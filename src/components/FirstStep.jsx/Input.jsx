@@ -37,15 +37,17 @@ const Input = ({ placeholder, text, speech, message, errors, register }) => {
         </label>
       </div>
       <input
-        type="tel"
+        type="text"
         placeholder={placeholder}
         className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
         {...register(text, { required: true })}
         style={
-          errors && {
-            border: "1px solid red",
-            boxShadow: "none",
-          }
+          Object.hasOwn(errors, text)
+            ? {
+                border: "1px solid red",
+                boxShadow: "none",
+              }
+            : {}
         }
       />
       {Object.hasOwn(errors, text) && (
@@ -56,9 +58,11 @@ const Input = ({ placeholder, text, speech, message, errors, register }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={
-          errors && {
-            bottom: "65%",
-          }
+          Object.hasOwn(errors, text)
+            ? {
+                bottom: "65%",
+              }
+            : {}
         }
       >
         <p
