@@ -14,6 +14,7 @@ const Form = () => {
   const input = "border-[2px] rounded-md h-[18px] w-[18px] ";
   const href = "text-blue duration-300";
 
+  const [checkedAll, setCheckedAll] = useState(true);
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -21,31 +22,41 @@ const Form = () => {
   };
 
   const {
-    control,
     register,
     handleSubmit,
-    watch,
     formState: { errors },
     setValue,
   } = useForm();
 
-
-  const handleSelectAll = (e) => {
-    const isChecked = e.target.checked;
-    setValue("selectAll", isChecked);
-    setValue("1_1", isChecked); // Set lower checkbox value based on higher checkbox
+  const handleSelectAll = () => {
+    setValue("1_1", checkedAll);
+    setValue("1_2", checkedAll);
+    setValue("1_2_1", checkedAll);
+    setValue("1_2_2", checkedAll);
+    setValue("1_2_1_1", checkedAll);
+    setValue("1_2_1_2", checkedAll);
+    setValue("1_2_2_1", checkedAll);
+    setValue("1_2_2_2", checkedAll);
+    setValue("1_2_2_3", checkedAll);
+    setValue("1_2_2_4", checkedAll);
+    setCheckedAll(!checkedAll);
   };
 
-  const handle1_1 = (e) => {
-    setValue("1_1", e.target.checked);
-  };
+  // const handleSelectAll = () => {
+  //   setValue("1_2_1_1", checkedAll);
+  //   setValue("1_2_1_2", checkedAll);
+  //    setCheckedAll(!checkedAll);
+  // };
 
-  const selectAll = watch("selectAll");
-  // const accepts = watch("accepts");
-  const accepts = watch();
+  // const handleSelectAll = () => {
+  //   setValue("1_2_2_1", checkedAll);
+  //   setValue("1_2_2_2", checkedAll);
+  //   setValue("1_2_2_3", checkedAll);
+  //   setValue("1_2_2_4", checkedAll);
+  //   setCheckedAll(!checkedAll);
+  // };
+
   const onSubmit = (data) => alert(JSON.stringify(data));
-  // console.log(selectAll);
-  console.log(accepts);
 
   return (
     <div className="w-full sm:w-[600px] mx-auto">
@@ -72,11 +83,10 @@ const Form = () => {
               >
                 <div className={`${gap}`}>
                   <input
+                    name="selectAll"
                     type="checkbox"
                     onChange={handleSelectAll}
-                    ref={control.register}
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                    {...register("selectAll")}
                   />
 
                   <label className="font-bold">
@@ -86,11 +96,7 @@ const Form = () => {
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
-                    // value="privacy"
-                    ref={control.register}
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                    checked={selectAll}
-                    onChange={handle1_1}
                     {...register("1_1", {
                       required: { value: true, message: "Nie wyrażono zgody" },
                     })}
@@ -126,9 +132,7 @@ const Form = () => {
                 <div className={`${gap}`}>
                   <input
                     type="checkbox"
-                    // value="information"
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                    checked={selectAll}
                     {...register("1_2", {
                       required: { value: true, message: "Nie wyrażono zgody" },
                     })}
@@ -157,6 +161,7 @@ const Form = () => {
                           <div>
                             <input
                               type="checkbox"
+                              // onChange={handleSelectAll}
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("1_2_1", {
                                 required: {
@@ -222,6 +227,7 @@ const Form = () => {
                           <div>
                             <input
                               type="checkbox"
+                              // onChange={handleSelectAll}
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("1_2_2", {
                                 required: {
@@ -350,7 +356,7 @@ const Form = () => {
                     value="submit"
                     className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} text-white text-[18px] font-bold py-[13.5px] bg-blue w-full mt-[20px] rounded-2xl hover:bg-darkGrey duration-300`}
                   >
-                    Dalej
+                    Aplikuj
                   </button>
                 </a>
               </div>
