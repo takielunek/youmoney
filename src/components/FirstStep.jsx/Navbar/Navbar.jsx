@@ -2,9 +2,12 @@ import darkLogo from "../../../assets/MainPage/logo/darkLogo.svg";
 import lightLogo from "../../../assets/MainPage/logo/lightLogo.svg";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
+import { useParams } from "react-router-dom";
+
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
+  const { amount } = useParams();
 
   const spanText =
     "text-[20px] sm:text-[22px] md:text-[25px] text-blue mx-[10px] font-bold";
@@ -19,9 +22,11 @@ const Navbar = () => {
             alt="Logo"
           />
         </a>
-        <div className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} xxs:flex text-[14px] sm:text-[16px] md:text-[18px] self-center mt-[15px] sm:mt-0`}>
+        <div
+          className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} xxs:flex text-[14px] sm:text-[16px] md:text-[18px] self-center mt-[15px] sm:mt-0`}
+        >
           <p>
-            Aplikujesz o <span className={`${spanText}`}>2000 zł</span>
+            Aplikujesz o <span className={`${spanText}`}>`${amount}`</span>
           </p>
           <p>
             na okres <span className={`${spanText}`}>30 dni</span>

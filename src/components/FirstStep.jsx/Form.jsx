@@ -15,9 +15,9 @@ const Form = () => {
   const href = "text-blue duration-300";
 
   const [checkedAll, setCheckedAll] = useState(true);
-  console.log(checkedAll)
+  console.log(checkedAll);
   const [checked2, setChecked2] = useState(true);
-    const [checked3, setChecked3] = useState(true);
+  const [checked3, setChecked3] = useState(true);
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -28,7 +28,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setValue, 
+    setValue,
   } = useForm();
 
   const handleSelectAll = () => {
@@ -49,8 +49,6 @@ const Form = () => {
     setChecked2(!checked2);
   };
 
-
-
   const handleSelect3 = () => {
     setValue("fifth", checked3);
     setValue("sixth", checked3);
@@ -58,8 +56,6 @@ const Form = () => {
     setValue("eighth", checked3);
     setChecked3(!checked3);
   };
-
-
 
   const onSubmit = (data) => alert(JSON.stringify(data));
 
@@ -172,7 +168,7 @@ const Form = () => {
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("third", {
-                                required: true
+                                required: true,
                               })}
                             />
 
@@ -191,7 +187,7 @@ const Form = () => {
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("fourth", {
-                                required: true
+                                required: true,
                               })}
                             />
 
@@ -226,7 +222,7 @@ const Form = () => {
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("fifth", {
-                                required: true
+                                required: true,
                               })}
                             />
 
@@ -245,7 +241,7 @@ const Form = () => {
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("sixth", {
-                                required: true
+                                required: true,
                               })}
                             />
 
@@ -264,7 +260,7 @@ const Form = () => {
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("seventh", {
-                                required: true
+                                required: true,
                               })}
                             />
 
@@ -283,7 +279,7 @@ const Form = () => {
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
                               {...register("eighth", {
-                                required: true
+                                required: true,
                               })}
                             />
 
