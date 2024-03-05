@@ -11,6 +11,7 @@ Link do strony:
 * Swiper
 * React
 * React Hooks
+* React Hook Form
 * React Icon
 * Google Fonts
 * Vite

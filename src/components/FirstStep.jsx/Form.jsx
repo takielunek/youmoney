@@ -15,6 +15,9 @@ const Form = () => {
   const href = "text-blue duration-300";
 
   const [checkedAll, setCheckedAll] = useState(true);
+  console.log(checkedAll)
+  const [checked2, setChecked2] = useState(true);
+    const [checked3, setChecked3] = useState(true);
   const [toggle, setToggle] = useState(false);
 
   const handleToggle = () => {
@@ -25,36 +28,38 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
+    setValue, 
   } = useForm();
 
   const handleSelectAll = () => {
-    setValue("1_1", checkedAll);
-    setValue("1_2", checkedAll);
-    setValue("1_2_1", checkedAll);
-    setValue("1_2_2", checkedAll);
-    setValue("1_2_1_1", checkedAll);
-    setValue("1_2_1_2", checkedAll);
-    setValue("1_2_2_1", checkedAll);
-    setValue("1_2_2_2", checkedAll);
-    setValue("1_2_2_3", checkedAll);
-    setValue("1_2_2_4", checkedAll);
+    setValue("first", checkedAll);
+    setValue("second", checkedAll);
+    setValue("third", checkedAll);
+    setValue("fourth", checkedAll);
+    setValue("fifth", checkedAll);
+    setValue("sixth", checkedAll);
+    setValue("seventh", checkedAll);
+    setValue("eighth", checkedAll);
     setCheckedAll(!checkedAll);
   };
 
-  // const handleSelectAll = () => {
-  //   setValue("1_2_1_1", checkedAll);
-  //   setValue("1_2_1_2", checkedAll);
-  //    setCheckedAll(!checkedAll);
-  // };
+  const handleSelect2 = () => {
+    setValue("third", checked2);
+    setValue("fourth", checked2);
+    setChecked2(!checked2);
+  };
 
-  // const handleSelectAll = () => {
-  //   setValue("1_2_2_1", checkedAll);
-  //   setValue("1_2_2_2", checkedAll);
-  //   setValue("1_2_2_3", checkedAll);
-  //   setValue("1_2_2_4", checkedAll);
-  //   setCheckedAll(!checkedAll);
-  // };
+
+
+  const handleSelect3 = () => {
+    setValue("fifth", checked3);
+    setValue("sixth", checked3);
+    setValue("seventh", checked3);
+    setValue("eighth", checked3);
+    setChecked3(!checked3);
+  };
+
+
 
   const onSubmit = (data) => alert(JSON.stringify(data));
 
@@ -86,7 +91,7 @@ const Form = () => {
                     name="selectAll"
                     type="checkbox"
                     onChange={handleSelectAll}
-                    className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                    className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input} `}
                   />
 
                   <label className="font-bold">
@@ -97,16 +102,14 @@ const Form = () => {
                   <input
                     type="checkbox"
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                    {...register("1_1", {
-                      required: { value: true, message: "Nie wyrażono zgody" },
+                    {...register("first", {
+                      required: { value: true },
                     })}
                   />
 
                   <label>
-                    {errors.accepts && (
-                      <span className="text-red mr-[5px]">
-                        {errors.accepts.message}
-                      </span>
+                    {errors.first && (
+                      <p className="text-red mr-[5px]">Nie wyrażono zgody</p>
                     )}
                     Potwierdzam, że zapoznałem się z{" "}
                     <a
@@ -133,16 +136,14 @@ const Form = () => {
                   <input
                     type="checkbox"
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                    {...register("1_2", {
-                      required: { value: true, message: "Nie wyrażono zgody" },
+                    {...register("second", {
+                      required: { value: true },
                     })}
                   />
 
                   <label>
-                    {errors.accepts && (
-                      <span className="text-red mr-[5px]">
-                        {errors.accepts.message}
-                      </span>
+                    {errors.second && (
+                      <p className="text-red mr-[5px]">Nie wyrażono zgody</p>
                     )}
                     Chcę dostawać od Youmoney.pl i partnerów najnowsze i
                     dopasowane do moich potrzeb informacje o produktach i
@@ -161,14 +162,8 @@ const Form = () => {
                           <div>
                             <input
                               type="checkbox"
-                              // onChange={handleSelectAll}
+                              onChange={handleSelect2}
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_1", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
-                              })}
                             />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
@@ -176,19 +171,16 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_1_1", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
+                              {...register("third", {
+                                required: true
                               })}
                             />
 
                             <label>
-                              {errors.accepts && (
-                                <span className="text-red mr-[5px]">
-                                  {errors.accepts.message}
-                                </span>
+                              {errors.third && (
+                                <p className="text-red mr-[5px]">
+                                  Nie wyrażono zgody
+                                </p>
                               )}
                               wiadomości na mój adres email wskazany w
                               formularzu kontaktowym
@@ -198,19 +190,16 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_1_2", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
+                              {...register("fourth", {
+                                required: true
                               })}
                             />
 
                             <label>
-                              {errors.accepts && (
-                                <span className="text-red mr-[5px]">
-                                  {errors.accepts.message}
-                                </span>
+                              {errors.fourth && (
+                                <p className="text-red mr-[5px]">
+                                  Nie wyrażono zgody
+                                </p>
                               )}
                               wiadomości SMS na mój numer telefonu wskazany w
                               formularzu kontaktowym
@@ -227,14 +216,8 @@ const Form = () => {
                           <div>
                             <input
                               type="checkbox"
-                              // onChange={handleSelectAll}
+                              onChange={handleSelect3}
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_2", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
-                              })}
                             />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
@@ -242,19 +225,16 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_2_1", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
+                              {...register("fifth", {
+                                required: true
                               })}
                             />
 
                             <label>
-                              {errors.accepts && (
-                                <span className="text-red mr-[5px]">
-                                  {errors.accepts.message}
-                                </span>
+                              {errors.fifth && (
+                                <p className="text-red mr-[5px]">
+                                  Nie wyrażono zgody
+                                </p>
                               )}
                               wiadomości na mój adres email wskazany w
                               formularzu kontaktowym
@@ -264,19 +244,16 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_2_2", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
+                              {...register("sixth", {
+                                required: true
                               })}
                             />
 
                             <label>
-                              {errors.accepts && (
-                                <span className="text-red mr-[5px]">
-                                  {errors.accepts.message}
-                                </span>
+                              {errors.sixth && (
+                                <p className="text-red mr-[5px]">
+                                  Nie wyrażono zgody
+                                </p>
                               )}
                               wiadomości głosowych na mój numer telefonu
                               wskazany w formularzu kontaktowym.
@@ -286,19 +263,16 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_2_3", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
+                              {...register("seventh", {
+                                required: true
                               })}
                             />
 
                             <label>
-                              {errors.accepts && (
-                                <span className="text-red mr-[5px]">
-                                  {errors.accepts.message}
-                                </span>
+                              {errors.seventh && (
+                                <p className="text-red mr-[5px]">
+                                  Nie wyrażono zgody
+                                </p>
                               )}
                               wiadomości SMS na mój numer telefonu wskazany w
                               formularzu kontaktowym
@@ -308,19 +282,16 @@ const Form = () => {
                             <input
                               type="checkbox"
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
-                              {...register("1_2_2_4", {
-                                required: {
-                                  value: true,
-                                  message: "Nie wyrażono zgody",
-                                },
+                              {...register("eighth", {
+                                required: true
                               })}
                             />
 
                             <label>
-                              {errors.accepts && (
-                                <span className="text-red mr-[5px]">
-                                  {errors.accepts.message}
-                                </span>
+                              {errors.eighth && (
+                                <p className="text-red mr-[5px]">
+                                  Nie wyrażono zgody
+                                </p>
                               )}
                               połączeń telefonicznych na mój numer telefonu
                               wskazany w formularzu kontaktowym.

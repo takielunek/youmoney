@@ -75,11 +75,25 @@ const Input = ({ placeholder, text, speech, message, errors, register }) => {
         <div>
           <div
             className={`${theme === "light" ? " text-white bg-grey" : " bg-superLightGrey2 text-grey"} ${speechBuble}`}
+            style={
+              Object.hasOwn(errors, text)
+                ? {
+                    bottom: "68px",
+                  }
+                : {}
+            }
           >
             {speech}
           </div>
           <AiFillCaretDown
             className={`${theme === "light" ? " text-grey" : " text-superLightGrey2"} ${icon}`}
+            style={
+              Object.hasOwn(errors, text)
+                ? {
+                    bottom: "55px",
+                  }
+                : {}
+            }
           />
         </div>
       )}
