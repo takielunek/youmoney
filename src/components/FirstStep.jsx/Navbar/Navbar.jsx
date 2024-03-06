@@ -4,10 +4,9 @@ import { useContext } from "react";
 import { ThemeContext } from "../../../App";
 import { useParams } from "react-router-dom";
 
-
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
-  const { amount } = useParams();
+  const { amount, day = 30 } = useParams();
 
   const spanText =
     "text-[20px] sm:text-[22px] md:text-[25px] text-blue mx-[10px] font-bold";
@@ -26,10 +25,10 @@ const Navbar = () => {
           className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} xxs:flex text-[14px] sm:text-[16px] md:text-[18px] self-center mt-[15px] sm:mt-0`}
         >
           <p>
-            Aplikujesz o <span className={`${spanText}`}>`${amount}`</span>
+            Aplikujesz o <span className={`${spanText}`}>{amount} zł</span>
           </p>
           <p>
-            na okres <span className={`${spanText}`}>30 dni</span>
+            na okres <span className={`${spanText}`}>{day} dni</span>
           </p>
         </div>
       </div>

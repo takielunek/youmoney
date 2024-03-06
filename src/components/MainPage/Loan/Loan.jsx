@@ -19,7 +19,7 @@ const Loan = () => {
             >
               <a
                 className="text-[16px] sm:text-[17px] md:text-[18px] text-white hover:text-blue regular h-[50px] grid place-items-center"
-                href="/step1/${amount}"
+                href={`/step1/${loan.amount}`}
               >
                 {loan.amount}
               </a>

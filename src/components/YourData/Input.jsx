@@ -43,11 +43,12 @@ const Input = ({ placeholder, text, message, errors, register }) => {
         {...register(text, { required: true })}
         className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
         style={
-          Object.hasOwn(errors,text) ? {
-           border: "1px solid red",
-            boxShadow: "none",
-          } : {}
-       
+          Object.hasOwn(errors, text)
+            ? {
+                border: "1px solid red",
+                boxShadow: "none",
+              }
+            : {}
         }
       />
       {Object.hasOwn(errors, text) && (
@@ -75,6 +76,13 @@ const Input = ({ placeholder, text, message, errors, register }) => {
         <div>
           <div
             className={`${theme === "light" ? " text-white bg-grey" : " bg-superLightGrey2 text-grey"} ${speechBuble}`}
+            style={
+              Object.hasOwn(errors, text)
+                ? {
+                    bottom: "66px",
+                  }
+                : {}
+            }
           >
             Zwróć uwagę, aby to był ten, <br /> który podawałaś/eś podczas{" "}
             <br />
@@ -82,6 +90,13 @@ const Input = ({ placeholder, text, message, errors, register }) => {
           </div>
           <AiFillCaretDown
             className={`${theme === "light" ? " text-grey" : " text-superLightGrey2"} ${icon}`}
+            style={
+              Object.hasOwn(errors, text)
+                ? {
+                    bottom: "55px",
+                  }
+                : {}
+            }
           />
         </div>
       )}

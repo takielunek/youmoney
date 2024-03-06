@@ -8,10 +8,10 @@ import { useState, useEffect } from "react";
 const Application = () => {
   const { theme } = useContext(ThemeContext);
 
-  const [price, setPrice] = useState(2000);
+  const [amount, setAmount] = useState(2000);
 
   const handlePriceChange = (event, newValue) => {
-    setPrice(newValue);
+    setAmount(newValue);
   };
 
   const [day, setDay] = useState(30);
@@ -57,7 +57,7 @@ const Application = () => {
             Ile chcesz pożyczyć?
           </p>
           <p className="text-blue text-[21px] sm:text-[30px] bold">
-            {price} zł
+            {amount} zł
           </p>
         </div>
 
@@ -99,7 +99,7 @@ const Application = () => {
         </div>
 
         <div>
-          <a href="/step1">
+          <a href={`/step1/${amount}${day}`}>
             <button
               className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} w-full mt-[36px] mb-[18px] text-white text-[16px] sm:text-[18px] regular bg-blue py-[13.5px] px-[18px] rounded-xl duration-300`}
             >
@@ -122,7 +122,7 @@ const Application = () => {
       >
         <div className="flex w-full sm:w-[50%] justify-center">
           <p className="mr-2 regular">Kwota do spłaty:</p>
-          <p className="bold">{price} zł</p>
+          <p className="bold">{amount} zł</p>
         </div>
         <div className="flex w-full sm:w-[50%] justify-center">
           <p className="mr-2 regular">Data spłaty:</p>

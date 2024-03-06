@@ -11,7 +11,7 @@ const DeleteYourData = () => {
 
   useEffect(() => {
     document.title = "Wypisanie z subskrypcji Youmoney";
-  }, []);
+  }, []);  
 
     const {
       register,
