@@ -33,7 +33,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="self-center hidden sm:block">
-            <a href="/step1/2000">
+            <a href="/step1/2000/30">
               <button
                 className={`${theme === "light" ? "hover:border-darkGrey hover:text-darkGrey" : "hover:border-darkModeBlueButton hover:text-darkModeBlueButton"} text-blue border-[2px] border-blue px-[20px] py-[10px] rounded-xl  duration-300`}
               >

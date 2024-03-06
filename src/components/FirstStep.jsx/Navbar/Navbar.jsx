@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
-  const { amount, day = 30 } = useParams();
+  const { amount, day } = useParams();
 
   const spanText =
     "text-[20px] sm:text-[22px] md:text-[25px] text-blue mx-[10px] font-bold";

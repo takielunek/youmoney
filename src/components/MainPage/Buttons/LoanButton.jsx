@@ -7,7 +7,7 @@ const LoanButton = () => {
 
   return (
     <div>
-      <a href="/step1">
+      <a href="/step1/2000/30">
         <button
           id="toTopLink"
           className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} z-40 hidden fixed bottom-[16px] right-[80px] bg-blue duration-500 text-white ubuntu-medium text-[16px] px-[48px] py-[10px] border-2 border-white rounded-xl`}

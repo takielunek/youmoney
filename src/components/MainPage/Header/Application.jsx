@@ -99,7 +99,7 @@ const Application = () => {
         </div>
 
         <div>
-          <a href={`/step1/${amount}${day}`}>
+          <a href={`/step1/${amount}/${day}`}>
             <button
               className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} w-full mt-[36px] mb-[18px] text-white text-[16px] sm:text-[18px] regular bg-blue py-[13.5px] px-[18px] rounded-xl duration-300`}
             >

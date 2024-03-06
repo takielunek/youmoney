@@ -2,7 +2,6 @@ import { loan } from "./index.js";
 import money from "../../../assets/MainPage/other/money.png";
 
 const Loan = () => {
-
   return (
     <section className="bg-blue my-[85px]">
       <div className="wrapper py-[119px] relative">
@@ -19,7 +18,7 @@ const Loan = () => {
             >
               <a
                 className="text-[16px] sm:text-[17px] md:text-[18px] text-white hover:text-blue regular h-[50px] grid place-items-center"
-                href={`/step1/${loan.amount}`}
+                href={`/step1/${loan.amount}/30`}
               >
                 {loan.amount}
               </a>
