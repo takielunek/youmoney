@@ -40,4 +40,3 @@ const MainPage = () => {
 
 export default MainPage;
 
-// {`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"}`}

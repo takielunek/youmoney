@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { ThemeContext } from "./../../App";
 import Input from "./Input.jsx";
 
+// export default function Form () {
 const Form = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -15,11 +16,10 @@ const Form = () => {
   const href = "text-blue duration-300";
 
   const [checkedAll, setCheckedAll] = useState(true);
-  console.log(checkedAll);
+  // console.log(checkedAll);
   const [checked2, setChecked2] = useState(true);
   const [checked3, setChecked3] = useState(true);
   const [toggle, setToggle] = useState(false);
-
   const handleToggle = () => {
     setToggle(!toggle);
   };
@@ -30,7 +30,6 @@ const Form = () => {
     formState: { errors },
     setValue,
   } = useForm();
-
   const handleSelectAll = () => {
     setValue("first", checkedAll);
     setValue("second", checkedAll);
@@ -40,6 +39,8 @@ const Form = () => {
     setValue("sixth", checkedAll);
     setValue("seventh", checkedAll);
     setValue("eighth", checkedAll);
+    setValue("selectAll2", checkedAll);
+    setValue("selectAll3", checkedAll);
     setCheckedAll(!checkedAll);
   };
 
@@ -58,7 +59,10 @@ const Form = () => {
   };
 
   const onSubmit = (data) => alert(JSON.stringify(data));
-
+  // console.log("selectAll", watch("selectAll"));
+  // console.log("selectAll2", watch("selectAll2"));
+  // console.log("selectAll3", watch("selectAll3"));
+  // console.log("checkedAll", checkedAll);
   return (
     <div className="w-full sm:w-[600px] mx-auto">
       <div>
@@ -84,10 +88,11 @@ const Form = () => {
               >
                 <div className={`${gap}`}>
                   <input
-                    name="selectAll"
                     type="checkbox"
-                    onChange={handleSelectAll}
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input} `}
+                    {...register("selectAll", {
+                      onChange: handleSelectAll,
+                    })}
                   />
 
                   <label className="font-bold">
@@ -158,8 +163,11 @@ const Form = () => {
                           <div>
                             <input
                               type="checkbox"
-                              onChange={handleSelect2}
+                              // onChange={handleSelect2}
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                              {...register("selectAll2", {
+                                onChange: handleSelect2,
+                              })}
                             />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
@@ -212,8 +220,11 @@ const Form = () => {
                           <div>
                             <input
                               type="checkbox"
-                              onChange={handleSelect3}
+                              // onChange={handleSelect3}
                               className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input}`}
+                              {...register("selectAll3", {
+                                onChange: handleSelect3,
+                              })}
                             />{" "}
                             <label>zaznacz wszystkie</label>
                           </div>
