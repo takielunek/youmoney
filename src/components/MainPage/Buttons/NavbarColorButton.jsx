@@ -9,7 +9,7 @@ const NavbarColorButton = ({ toggleTheme }) => {
   return (
     <div className="cursor-pointer">
       <div
-        className={`${theme === "light" ? " text-darkGrey" : " text-white"}  pt-[18px] p-[20px]  hover:rotate-180 duration-300`}
+        className={`${theme === "light" ? " text-darkGrey" : " text-white"}   p-[20px]  hover:rotate-180 duration-300`}
         onClick={() => toggleTheme()}
       >
         <VscColorMode className="h-[18px] w-[18px]" />

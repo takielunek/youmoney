@@ -51,7 +51,7 @@ const Form = () => {
                   />
 
                   <label className="font-bold">
-                    Akceptuję wszystkie zgody i oświadczenia
+                   Lorem ipsum dolor sit amet consectetur.
                   </label>
                 </div>
               </div>
