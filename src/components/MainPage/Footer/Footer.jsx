@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <section
-      className={`${theme === "light" ? "bg-darkBlue" : "bg-darkMode"} pt-[96px] sm:pt-[108px] pb-[54px]`}
+      className={`${theme === "light" ? "bg-darkBlue" : "bg-darkMode"} pt-[96px] sm:pt-[108px] pb-[74px]`}
     >
       <div className="wrapper sm:flex w-11/12 md:w-10/12">
         <div className="w-11/12 ss:w-2/3 sm:w-1/4 flex flex-col relative mx-auto">
@@ -19,9 +19,7 @@ const Footer = () => {
             <img className="h-[54px] absolute" src={lightLogo} alt="Logo" />
           </a>
           <div className="flex flex-col text-[14px] text-lightGrayish medium mt-[108px] gap-[8px]">
-            <a className="hover:text-white" href="/about">
-              O nas
-            </a>
+          
             <a className="hover:text-white" href="/contact">
               Kontakt
             </a>
@@ -31,15 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-11/12 ss:w-2/3 sm:w-1/4 flex flex-col medium pt-[30px] pb-[60px] sm:pb-0 mx-auto pr-[5px]">
-          <p className="text-[16px] md:text-[18px] text-white">
-            Może Ci się przydać
-          </p>
-          <a
-            className="text-[14px] text-lightGrayish my-[18px] hover:text-white"
-            href="/how"
-          >
-            Jak to działa
-          </a>
+          
           <p className="text-[16px] md:text-[18px] text-white">
             Obsługa klienta
           </p>

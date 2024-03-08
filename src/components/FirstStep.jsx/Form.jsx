@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { stepOne } from "./index.js";
 import { useForm } from "react-hook-form";
-import privacy from "../../assets/pdf/polityka_prywatnosci_findao.pdf";
-import regulations from "../../assets/pdf/regulamin_findao.pdf";
+// import privacy from "../../assets/pdf/polityka_prywatnosci_findao.pdf";
+// import regulations from "../../assets/pdf/regulamin_findao.pdf";
 import { useContext } from "react";
 import { ThemeContext } from "./../../App";
 import Input from "./Input.jsx";
@@ -13,6 +12,7 @@ const Form = () => {
 
   const gap = "flex gap-[9px]";
   const input = "border-[2px] rounded-md h-[18px] w-[18px] ";
+<<<<<<< HEAD
   const href = "text-blue duration-300";
 
   const [checkedAll, setCheckedAll] = useState(true);
@@ -23,13 +23,15 @@ const Form = () => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
+=======
+>>>>>>> f940efc845585afe1d24b7397aabb1235919b0df
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
   } = useForm();
+<<<<<<< HEAD
   const handleSelectAll = () => {
     setValue("first", checkedAll);
     setValue("second", checkedAll);
@@ -57,6 +59,8 @@ const Form = () => {
     setValue("eighth", checked3);
     setChecked3(!checked3);
   };
+=======
+>>>>>>> f940efc845585afe1d24b7397aabb1235919b0df
 
   const onSubmit = (data) => alert(JSON.stringify(data));
   // console.log("selectAll", watch("selectAll"));
@@ -95,6 +99,7 @@ const Form = () => {
                     })}
                   />
 
+<<<<<<< HEAD
                   <label className="font-bold">
                     Akceptuję wszystkie zgody i oświadczenia
                   </label>
@@ -324,17 +329,21 @@ const Form = () => {
                         [ROZWIŃ]
                       </span>
                     )}
+=======
+                  <label className="font-normal">
+                    Lorem ipsum dolor sit amet consectetur.
+>>>>>>> f940efc845585afe1d24b7397aabb1235919b0df
                   </label>
                 </div>
               </div>
               <div>
-                <a href="/step2">
+                <a href="/message">
                   <button
                     type="submit"
                     value="submit"
                     className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} text-white text-[18px] font-bold py-[13.5px] bg-blue w-full mt-[20px] rounded-2xl hover:bg-darkGrey duration-300`}
                   >
-                    Aplikuj
+                    Aplică
                   </button>
                 </a>
               </div>

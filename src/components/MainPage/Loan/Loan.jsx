@@ -20,14 +20,14 @@ const Loan = () => {
                 className="text-[16px] sm:text-[17px] md:text-[18px] text-white hover:text-blue regular h-[50px] grid place-items-center"
                 href={`/step1/${loan.amount}/30`}
               >
-                {loan.amount}
+                {loan.amount} zł
               </a>
             </div>
           ))}
         </div>
-        <div className="text-center">
+        <div className="flex justify-around">
           <a
-            className="text-[16px] sm:text-[17px] md:text-[18px] underline text-white medium hover:text-superLightGrey duration-700"
+            className="text-[16px] sm:text-[17px] md:text-[18px] border-2 rounded-2xl text-white hover:text-blue regular px-[18px] py-[13.5px] hover:bg-white duration-700"
             href="#header"
           >
             Potrzebuje innej kwoty

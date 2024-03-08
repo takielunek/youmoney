@@ -2,6 +2,7 @@ import TextSection from "./TextSection";
 import { itWorks } from "./index.js";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
+import AboutUs from "./AboutUs.jsx";
 
 const HowItWorks = () => {
   const { theme } = useContext(ThemeContext);
@@ -70,6 +71,7 @@ const HowItWorks = () => {
           </button>
         </a>
       </div>
+      <AboutUs />
     </section>
   );
 };
