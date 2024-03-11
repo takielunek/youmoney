@@ -3,11 +3,9 @@ import bg3 from "../../../assets/MainPage/bg/bg3.png";
 
 const ThanksTo = () => {
   return (
-    <section className="bg-blue mt-[140px]">
+    <section className="bg-bgBlue mt-[140px]">
       <div className="sm:flex relative pb-[144px] pt-[90px]">
-        <div 
-        className="sm:w-[40%]"
-        >
+        <div className="sm:w-[40%]">
           <img
             className="absolute bottom-0 -left-[150px] xxl:left-0 hidden sm:block h-full"
             src={bg2}

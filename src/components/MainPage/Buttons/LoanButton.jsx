@@ -10,7 +10,7 @@ const LoanButton = () => {
       <a href="/step1/2000/30">
         <button
           id="toTopLink"
-          className={`${theme === "light" ? "hover:bg-darkBlue" : "hover:bg-darkModeBlueButton"} w-full sm:w-[260px] z-40 hidden fixed bottom-0 sm:-translate-x-1/2 bg-blue duration-500 text-white ubuntu-medium text-[18px] py-[16.2px] rounded-t-xl`}
+          className={`${theme === "light" ? "hover:bg-darkBlue" : "hover:bg-blue"} w-full sm:w-[260px] z-40 hidden fixed bottom-0 sm:-translate-x-1/2 bg-blue duration-500 text-white ubuntu-medium text-[18px] py-[16.2px] rounded-t-xl`}
         >
           Weź pożyczkę{" "}
           <div className="relative">

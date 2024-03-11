@@ -47,7 +47,7 @@ const HowItWorks = () => {
                   </p>
                 </div>
                 <p
-                  className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[14px] sm:text-[17px] mb-[30px] regular`}
+                  className={`${theme === "light" ? "text-lightGrey" : "text-superLightGrey2"} text-[14px] sm:text-[17px] mb-[30px] ubuntu-regular`}
                 >
                   {" "}
                   {itWorks.text}
@@ -66,7 +66,9 @@ const HowItWorks = () => {
       </div>
       <div className="flex justify-around my-[85px]">
         <a href="#header">
-          <button className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} px-[45px] py-[20px] bg-blue text-white medium text-[16px] sm:text-[18px] rounded-2xl duration-300`}>
+          <button
+            className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} px-[45px] py-[20px] bg-blue text-white medium text-[16px] sm:text-[18px] rounded-2xl duration-300`}
+          >
             Weź pożyczkę teraz!
           </button>
         </a>

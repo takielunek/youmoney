@@ -3,12 +3,11 @@ import Navbar from "../Navbar/Navbar";
 import Application from "./Application";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
+import ManageButton from "../Buttons/ManageButton";
 
 const Header = () => {
   const { theme } = useContext(ThemeContext);
 
-
-  
   return (
     <section>
       <div className="bg-header">
@@ -45,6 +44,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <ManageButton />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import money from "../../../assets/MainPage/other/money.png";
 
 const Loan = () => {
   return (
-    <section className="bg-blue my-[85px]">
+    <section className="bg-bgBlue my-[85px]">
       <div className="wrapper py-[119px] relative">
         <div className="text-center">
           <h1 className="text-[30px] sm:text-[40px] md:text-[54px] bold text-white">

@@ -10,17 +10,25 @@ import { ThemeContext } from "../../../App";
 const CarouselDefault = () => {
   const { theme } = useContext(ThemeContext);
   const button =
-    "text-[20px] mb-30 cursor-pointer border-2 border-silver rounded-full hover:border-4 duration-200";
-  const icon = "h-[12px] w-[12px] text-lightGrayish m-2";
+    "text-[20px] mb-30 cursor-pointer border-2 rounded-full hover:border-4 duration-200";
+  const icon = "h-[12px] w-[12px] m-2";
 
   return (
     <section className="pt-[20px] md:pt-[50px] px-[63px] mb-[30px] sm:mb-0 relative">
       <div className="absolute flex inset-0 items-center justify-between">
-        <div className={`${button} swiper-button-prev`}>
-          <FaChevronLeft className={`${icon}`} />
+        <div
+          className={`${theme === "light" ? "border-silver" : "border-darkModeItemsBg"} ${button} swiper-button-prev`}
+        >
+          <FaChevronLeft
+            className={`${theme === "light" ? "text-lightGrayish" : "text-darkModeItemsBg"} ${icon} `}
+          />
         </div>
-        <div className={`${button} swiper-button-next`}>
-          <FaChevronRight className={`${icon}`} />
+        <div
+          className={`${theme === "light" ? "border-silver" : "border-darkModeItemsBg"} ${button} swiper-button-next`}
+        >
+          <FaChevronRight
+            className={`${theme === "light" ? "text-lightGrayish" : "text-darkModeItemsBg"} ${icon}`}
+          />
         </div>
       </div>
       <Swiper

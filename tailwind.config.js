@@ -13,6 +13,7 @@ export default {
         darkGrey: "#1B2832",
         lightBlue: "#1095C120",
         blue: "#247BF6",
+        bgBlue: "#256edc",
         darkBlue: "#171D34",
         grayish: "#415462",
         lightGrayish: "#A0A9B0",
@@ -27,7 +28,11 @@ export default {
         darkModeItemsBg: "#343b40",
         darkModeBg: "#141e26",
         darkModeBlueButton: "#19b3e6",
-        darkModeBorderColor: "#374956"
+        darkModeBorderColor: "#374956",
+        cookieText: "#222222",
+        cookieButton: "#f9f9f9",
+        cookieAccordion: "#f7f7f7",
+        cookieAccordionText: "#008000",
       },
     },
     screens: {

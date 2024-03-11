@@ -13,7 +13,9 @@ const SendFeedback = () => {
   return (
     <div className="flex justify-center px-[10px] xs:px-[30px] sm:px-0 sm:w-[40%] relative">
       <div className="z-10 w-11/12 ss:w-2/3 sm:w-11/12 flex flex-col border-2 border-white bg-white rounded-xl mb-[25.5px] py-[45px] px-[30px] bgShadow">
-        <p className="text-[20px] sm:text-[22px] md:text-[23.4px] bold text-grey mb-[17px] ">
+        <p
+          className={`${theme === "light" ? "text-grey" : "text-darkModeText2"} text-[20px] sm:text-[22px] md:text-[23.4px] bold mb-[17px] `}
+        >
           Zostaw swoją opinię
         </p>
         <input
@@ -28,7 +30,7 @@ const SendFeedback = () => {
         ></textarea>
         <div>
           <button
-            className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} px-[30px] py-[12px] mt-[24px] bg-blue text-white medium text-[16px] md:text-[17px] rounded-2xl duration-300`}
+            className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} w-full py-[12px] mt-[24px] bg-blue text-white medium text-[16px] md:text-[17px] rounded-2xl duration-300`}
           >
             Wyślij swoją opinie
           </button>

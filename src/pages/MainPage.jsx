@@ -6,10 +6,9 @@ import Loan from "../components/MainPage/Loan/Loan";
 import Opinions from "../components/MainPage/Opinions/Opinions";
 import ThanksTo from "../components/MainPage/ThanksTo/ThanksTo";
 import Benefits from "../components/MainPage/Benefits/Benefits";
-import Answers from "../components/MainPage/Answers/Answers";
 import Footer from "../components/MainPage/Footer/Footer";
-import "./index.js";
 import LoanButton from "../components/MainPage/Buttons/LoanButton.jsx";
+import "./index.js";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 
@@ -31,7 +30,6 @@ const MainPage = () => {
       <Loan />
       <Questions />
       <Benefits />
-      <Answers />
       <Footer />
       <LoanButton />
     </div>
@@ -39,4 +37,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
