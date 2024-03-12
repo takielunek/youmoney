@@ -33,6 +33,7 @@ export default {
         cookieButton: "#f9f9f9",
         cookieAccordion: "#f7f7f7",
         cookieAccordionText: "#008000",
+        orange: "#f56e28",
       },
     },
     screens: {
