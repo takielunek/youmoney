@@ -11,11 +11,12 @@ const Header = () => {
   return (
     <section>
       <div className="bg-header">
+         <Navbar />
         <div className="wrapper w-11/12 md:w-10/12 mx-auto">
-          <Navbar />
+         
           <div
             id="header"
-            className="sm:pt-[50px] pb-[150px] sm:pb-[150px] relative px-[30px] w-full xs:w-[90%] xss:w-[80%] xsm:w-[70%] sm:w-full mx-auto sm:px-0"
+            className="pt-[88px] sm:pt-[138px] pb-[150px] sm:pb-[150px] relative px-[30px] w-full xs:w-[90%] xss:w-[80%] xsm:w-[70%] sm:w-full mx-auto sm:px-0"
           >
             <div className="sm:flex sm:justify-between">
               <div className="uppercase bold w-1/2 z-10 relative mt-[18px]">

@@ -7,15 +7,17 @@ const MessageNavbar = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="grid place-content-center p-[16px]">
-      <a href="/">
-        <img
-          src={theme === "light" ? darkLogo : lightLogo}
-          alt="Logo"
-          className="h-[38px] sm:h-[54px]"
-        />
-      </a>
-    </div>
+    <section className="fixed w-full bg-white">
+      <div className="grid place-content-center p-[16px]">
+        <a href="/">
+          <img
+            src={theme === "light" ? darkLogo : lightLogo}
+            alt="Logo"
+            className="h-[38px] sm:h-[54px]"
+          />
+        </a>
+      </div>
+    </section>
   );
 };
 

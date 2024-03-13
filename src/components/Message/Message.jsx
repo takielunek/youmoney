@@ -14,7 +14,7 @@ const Message = () => {
   return (
     <section>
       <MessageNavbar />
-      <div className="px-[16px] ss:px-0 py-[32px] ss:py-[40px] sm:py-[48px] md:py-[54px] flex justify-around">
+      <div className="px-[16px] ss:px-0 py-[32px] ss:py-[40px] sm:pt-[78px] sm:pb-[48px] md:pt-[84px] md:pb-[54px] flex justify-around">
         <div
           className={`${theme === "light" ? "bg-white" : "bg-darkModeItemsBg"} my-[32px] ss:my-[40px] sm:my-[48px] md:my-[54px] py-[24px] ss:py-[40px] sm:py-[48px] md:py-[54px] px-[12.8px] ss:px-[20px] sm:px-[24px] md:px-[36px] rounded-xl shadow-2xl w-full xss:w-[480px] ss:w-[510px]`}
         >

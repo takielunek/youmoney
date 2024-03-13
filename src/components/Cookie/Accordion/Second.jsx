@@ -34,11 +34,12 @@ const Second = () => {
           celów statystycznych.
         </div>
       </div>
-      <div
-        className={`${isChecked ? "bg-orange" : "bg-blue"} h-[20px] w-[40px] rounded-full absolute top-[12px] right-[45px]`}
+
+      <button
+        className={`${isChecked ? "bg-orange" : "bg-blue"} h-[20px] w-[40px] rounded-full absolute top-[12px] right-[45px] focus:ring-[2px] focus:ring-blue`}
       >
         <AntSwitch defaultChecked onClick={() => setIsChecked(!isChecked)} />
-      </div>
+      </button>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import ThanksTo from "../components/MainPage/ThanksTo/ThanksTo";
 import Benefits from "../components/MainPage/Benefits/Benefits";
 import Footer from "../components/MainPage/Footer/Footer";
 import LoanButton from "../components/MainPage/Buttons/LoanButton.jsx";
-import "./index.js";
+import "../components/MainPage/Buttons/index.js";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 
