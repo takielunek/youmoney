@@ -34,6 +34,7 @@ export default {
         cookieAccordion: "#f7f7f7",
         cookieAccordionText: "#008000",
         orange: "#f56e28",
+        grey2: "#7b7f82",
       },
     },
     screens: {

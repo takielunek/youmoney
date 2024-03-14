@@ -71,7 +71,7 @@ const Application = () => {
           onChange={handlePriceChange}
         />
 
-        <div className="flex justify-between text-superLightGrey text-[15px] light mb-[10px]">
+        <div className="flex justify-between text-grey2 text-[15px] light mb-[10px]">
           <p>100 zł</p>
           <p>10 000 zł</p>
         </div>
@@ -93,7 +93,7 @@ const Application = () => {
           onChange={handleDayChange}
         />
 
-        <div className="flex justify-between text-superLightGrey text-[15px] light">
+        <div className="flex justify-between text-grey2 text-[15px] light">
           <p>15 dni</p>
           <p>60 dni</p>
         </div>
@@ -107,10 +107,10 @@ const Application = () => {
             </button>
           </a>
         </div>
-        <div className="flex justify-around">
-          <div className="flex gap-[10px]">
+        <div className="flex justify-around mt-[6px]">
+          <div className="flex gap-[10px] leading-[24px]">
             <img className="h-[20px] w-[20px]" src={bulb} alt="Bulb icon" />
-            <p className="text-superLightGrey text-[13px] regular">
+            <p className="text-grey2 text-[13px] regular">
               Bezpłatnie i bez zobowiązań!
             </p>
           </div>

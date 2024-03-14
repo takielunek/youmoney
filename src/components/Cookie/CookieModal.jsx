@@ -3,6 +3,7 @@ import privacy from "../../assets/pdf/polityka_prywatnosci_findao.pdf";
 import { useState } from "react";
 import CookieAccordion from "./Accordion/CookieAccordion";
 
+
 // eslint-disable-next-line react/prop-types
 const CookieModal = ({ open, onClose }) => {
   if (!open) return null;
@@ -37,16 +38,18 @@ const CookieModal = ({ open, onClose }) => {
               />
             </button>
           </div>
-          <p className="text-[12px] mt-[40px] mb-[15px] ubuntu-regular text-cookieText">
-            Aby zapewnić jak najlepsze wrażenia, korzystamy z technologii,
-            takich jak pliki cookie, do przechowywania i/lub uzyskiwania dostępu
-            do informacji o urządzeniu. Zgoda na te technologie pozwoli nam
-            przetwarzać dane, takie jak zachowanie podczas przeglądania lub
-            unikalne identyfikatory na tej stronie. Brak wyrażenia zgody lub
-            wycofanie zgody może niekorzystnie wpłynąć na niektóre cechy i
-            funkcje.
-          </p>
-          {isVisible && <CookieAccordion />}
+          <div >
+            <p className="text-[12px] mt-[40px] mb-[15px] ubuntu-regular text-cookieText">
+              Aby zapewnić jak najlepsze wrażenia, korzystamy z technologii,
+              takich jak pliki cookie, do przechowywania i/lub uzyskiwania
+              dostępu do informacji o urządzeniu. Zgoda na te technologie
+              pozwoli nam przetwarzać dane, takie jak zachowanie podczas
+              przeglądania lub unikalne identyfikatory na tej stronie. Brak
+              wyrażenia zgody lub wycofanie zgody może niekorzystnie wpłynąć na
+              niektóre cechy i funkcje.
+            </p>
+            {isVisible && <CookieAccordion />}
+          </div>
           <div className="flex flex-col sm:flex-row justify-between text-[12px] ubuntu-medium gap-[10px] sm:gap-0">
             <button
               className={`${button} bg-blue text-white`}
