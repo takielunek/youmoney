@@ -30,13 +30,13 @@ const Header = () => {
               </div>
 
               {/* application  */}
-              <div className="sm:w-1/2 z-10 mb-[50px]">
+              <div className="sm:w-1/2 z-10 mt-[50px] sm:mt-0 lg:mb-[50px]">
                 <Application />
               </div>
             </div>
             <div className="z-0">
               <img
-                className="absolute -top-[50px] sm:top-[158px] right-0 xs:right-[50px] sm:left-[5%] xmd:left-[10%] lg:left-[180px] h-[250px] sm:h-[663px]"
+                className="absolute top-[50px] sm:top-[158px] right-0 xs:right-[50px] sm:left-[5%] xmd:left-[10%] lg:left-[180px] h-[250px] sm:h-[663px]"
                 src={woman}
                 alt="Woman"
               />
