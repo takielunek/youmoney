@@ -21,6 +21,7 @@ export default {
         cream: "#dadde0",
         silver: "#e4e8ec",
         red: "#c62828;",
+        red2: "#ab0e03;",
         sky: "#bfdbfe",
         darkMode: "#11191f",
         darkModeText: "#edf0f3",

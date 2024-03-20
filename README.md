@@ -14,6 +14,7 @@ Link do strony:
 * React Hook Form
 * React Icon
 * Google Fonts
+* API
 * Vite
 
 ## Kontakt

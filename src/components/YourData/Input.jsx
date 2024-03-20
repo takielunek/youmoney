@@ -13,7 +13,7 @@ const speechBuble =
 const icon = "absolute bottom-[33.3px] right-[28px] translate-x-1/2";
 
 // eslint-disable-next-line react/prop-types
-const Input = ({ placeholder, text, message, errors, register }) => {
+const Input = ({ placeholder, text, message, errors, register, type, validation }) => {
   const { theme } = useContext(ThemeContext);
 
   const [isHovered, setHovered] = useState(false);
@@ -25,6 +25,21 @@ const Input = ({ placeholder, text, message, errors, register }) => {
   const handleMouseLeave = () => {
     setHovered(false);
   };
+
+  //  const {inputValue } = useState({ inputValue: ""});
+
+   const getBorderColor = () => {
+
+let inputValue = true
+
+     if (errors[text]) {
+       return "red"; 
+     } else if (!inputValue) {
+       return "yellow"; 
+     } else {
+       return "green"; 
+     }
+   };
 
   return (
     <div key={data.id} className="relative z-0">
@@ -38,14 +53,14 @@ const Input = ({ placeholder, text, message, errors, register }) => {
         </label>
       </div>
       <input
-        type="tel"
+        type={type}
         placeholder={placeholder}
-        {...register(text, { required: true })}
+        {...register(text, validation, { required: true })}
         className={`${theme === "light" ? "bg-transparent border-cream" : "bg-darkMode border-darkModeBorderColor"} ${border} input`}
         style={
           Object.hasOwn(errors, text)
             ? {
-                border: "1px solid red",
+                border: `1px solid ${getBorderColor()}`,
                 boxShadow: "none",
               }
             : {}

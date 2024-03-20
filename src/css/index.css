@@ -123,6 +123,14 @@ body {
   color: #bbbfc3;
 }
 
+.input {
+  color: black;
+}
+
+.textarea {
+  color: black;
+}
+
 #dark .input {
   color: #bbbfc3;
   background: #11191f;
@@ -181,7 +189,6 @@ body {
   background-color: transparent !important;
   opacity: 1;
 }
-
 
 
 

@@ -36,7 +36,7 @@ const Third = () => {
         </div>
       </div>
       <button
-        className={`${isChecked ? "bg-orange" : "bg-blue"} h-[20px] w-[40px] rounded-full absolute top-[12px] right-[45px] focus:ring-[2px] focus:ring-blue`}
+        className={`${isChecked ? "bg-orange ring-[2px] ring-blue" : "bg-blue hover:ring-[2px] ring-blue duration-300"} h-[20px] w-[40px] rounded-full absolute top-[12px] right-[45px] active:ring-[2px] active:ring-blue`}
       >
         <AntSwitch defaultChecked onClick={() => setIsChecked(!isChecked)} />
       </button>
