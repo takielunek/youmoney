@@ -16,12 +16,10 @@ function dataSender(data) {
       console.log(JSON.stringify(response.data));
       return response.data;
     })
+
     .catch(function (error) {
       console.log(error);
     });
 }
 
 export default dataSender;
-
-console.log(import.meta.env.VITE_APP_KEY);
-console.log(import.meta.env.VITE_APP_URL);

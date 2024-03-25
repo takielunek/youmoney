@@ -190,5 +190,15 @@ body {
   opacity: 1;
 }
 
+.default-border {
+  border: 2px solid yellow; /* Default border color */
+}
 
+.error-border {
+  border: 2px solid red; /* Error border color */
+}
+
+.valid-border {
+  border: 2px solid green; /* Valid border color */
+}
 

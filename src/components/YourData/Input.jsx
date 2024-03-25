@@ -17,6 +17,7 @@ const Input = ({ placeholder, text, message, errors, register, type, validation 
   const { theme } = useContext(ThemeContext);
 
   const [isHovered, setHovered] = useState(false);
+  
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -26,20 +27,7 @@ const Input = ({ placeholder, text, message, errors, register, type, validation 
     setHovered(false);
   };
 
-  //  const {inputValue } = useState({ inputValue: ""});
-
-   const getBorderColor = () => {
-
-let inputValue = true
-
-     if (errors[text]) {
-       return "red"; 
-     } else if (!inputValue) {
-       return "yellow"; 
-     } else {
-       return "green"; 
-     }
-   };
+  
 
   return (
     <div key={data.id} className="relative z-0">
@@ -60,7 +48,7 @@ let inputValue = true
         style={
           Object.hasOwn(errors, text)
             ? {
-                border: `1px solid ${getBorderColor()}`,
+                border: `1px solid red`,
                 boxShadow: "none",
               }
             : {}

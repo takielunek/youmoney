@@ -31,6 +31,7 @@ const StepOne = () => {
           <div
             className={`${theme === "light" ? "text-grayish" : "text-superLightGrey2"} mt-[48px] sm:mt-[54px] text-center text-[12px]`}
           >
+           
             <p>
               &copy; {currentYear} - Youmoney.pl. Wszystkie Prawa Zastrzeżone
             </p>
