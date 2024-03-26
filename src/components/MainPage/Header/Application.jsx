@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../../App";
 import Slider from "@mui/material/Slider";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Application = () => {
   const { theme } = useContext(ThemeContext);
@@ -14,7 +15,7 @@ const Application = () => {
     setAmount(newValue);
   };
 
-  const [day, setDay] = useState(30);
+  const [period, setDay] = useState(30);
   const [repaymentDate, setRepaymentDate] = useState();
 
   useEffect(() => {
@@ -81,7 +82,9 @@ const Application = () => {
           >
             Na ile czasu?
           </p>
-          <p className="text-blue text-[21px] sm:text-[30px] bold">{day} dni</p>
+          <p className="text-blue text-[21px] sm:text-[30px] bold">
+            {period} dni
+          </p>
         </div>
 
         <Slider
@@ -99,13 +102,13 @@ const Application = () => {
         </div>
 
         <div>
-          <a href={`/step1/${amount}/${day}`}>
+          <Link to={`/step1/${amount}/${period}`}>
             <button
               className={`${theme === "light" ? "hover:bg-darkGrey" : "hover:bg-darkModeBlueButton"} w-full mt-[36px] mb-[18px] text-white text-[16px] sm:text-[18px] regular bg-blue py-[13.5px] px-[18px] rounded-xl duration-300`}
             >
               Wnioskuj o pożyczkę
             </button>
-          </a>
+          </Link>
         </div>
         <div className="flex justify-around mt-[6px]">
           <div className="flex gap-[10px] leading-[24px]">

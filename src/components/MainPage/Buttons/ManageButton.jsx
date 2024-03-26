@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CookieModal from "../../Cookie/CookieModal";
 
 const ManageButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true); // Set default state to true
+
+  useEffect(() => {
+    const isCookieSet = document.cookie.includes("cookieModalClosed=true");
+    setIsOpen(!isCookieSet); // Show modal if cookie is not set
+  }, []);
+  
+
+
 
   return (
     <div className="relative">

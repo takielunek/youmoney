@@ -5,6 +5,7 @@ export const data = [
     placeholder: "Numer telefonu",
     message: "Nie podałeś/aś swojego numeru telefonu!",
     type: "tel",
+    valueName: "unphone",
     validation: {
       pattern: {
         value: /^\d{9}$/,
@@ -17,6 +18,7 @@ export const data = [
     placeholder: "Adres e-mail",
     message: "Nie podałeś/aś swojego adresu e-mail!",
     type: "email",
+    valueName: "unemail",
     validation: {
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i,

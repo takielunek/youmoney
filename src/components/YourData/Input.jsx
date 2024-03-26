@@ -49,7 +49,6 @@ const Input = ({ placeholder, text, message, errors, register, type, validation 
           Object.hasOwn(errors, text)
             ? {
                 border: `1px solid red`,
-                boxShadow: "none",
               }
             : {}
         }

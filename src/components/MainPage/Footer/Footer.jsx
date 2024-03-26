@@ -4,6 +4,7 @@ import regulations from "../../../assets/pdf/regulamin_findao.pdf";
 import { footer } from "./index.js";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
@@ -53,9 +54,9 @@ const Footer = () => {
             <a className="hover:text-white" href="/list">
               Lista partnerów współpracujących
             </a>
-            <a className="hover:text-white" href="/data" target="_blank">
+            <Link className="hover:text-white" to="/data" target="_blank">
               Usuń swoje dane
-            </a>
+            </Link>
           </div>
         </div>
         <div className="w-11/12 ss:w-2/3 sm:w-1/2 flex flex-col gap-[10px] mx-auto">

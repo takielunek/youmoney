@@ -6,7 +6,7 @@ export const stepOne = [
     speech: "Pamiętaj aby zgadzało się z imieniem z dowodu osobistego",
     message: "Te rugăm să introduci prenumele",
     type: "text",
-
+    valueName: "firstName",
     validation: {
       minLength: {
         value: 3,
@@ -20,6 +20,7 @@ export const stepOne = [
     speech: "Pamiętaj aby zgadzało się z nazwiskiem z dowodu osobistego",
     message: "Te rugăm să introduci numele de familie",
     type: "text",
+    valueName: "lastName",
     validation: {
       minLength: {
         value: 3,
@@ -32,7 +33,8 @@ export const stepOne = [
     placeholder: "Cod numeric personal",
     speech: "Podaj swój numer PESEL, sprawdż czy wpisany jest poprawnie",
     message: "Te rog tramsmite o carte de identitate valida",
-    type: "number",
+    type: "phone",
+    valueName: "personalCode",
     validation: {
       minLength: {
         value: 11,
@@ -50,6 +52,7 @@ export const stepOne = [
       "Zwróć uwagę czy jest aktywny, na niego otrzymasz kody weryfikacyjne",
     message: "Te rugăm să introduci numărul de telefon",
     type: "tel",
+    valueName: "phone",
     validation: {
       pattern: {
         value: /^\d{9}$/,
@@ -63,6 +66,7 @@ export const stepOne = [
     speech: "Na niego otrzymasz wszystkie dokumenty udzielonej pożyczki",
     message: "Te rugăm să introduci emailul",
     type: "email",
+    valueName: "email",
     validation: {
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$/i,

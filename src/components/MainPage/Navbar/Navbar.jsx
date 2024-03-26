@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import NavbarColorButton from "../Buttons/NavbarColorButton";
 import Logo from "./Logo";
+import { useContext } from "react";
+import { ThemeContext } from "../../../App";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +26,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${isScrolled ? "navbar scrolled bg-white z-50" : "navbar bg-transparent"} fixed  w-full duration-100`}
+      className={`${isScrolled ? `scrolled ${theme === `light` ? `bg-white` : `bg-darkMode`} z-50` : " bg-transparent"} navbar fixed  w-full duration-100 }`}
     >
       <div className="wrapper mx-auto">
         <div className="flex justify-between py-[15px]">

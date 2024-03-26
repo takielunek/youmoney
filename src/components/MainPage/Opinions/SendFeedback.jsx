@@ -13,12 +13,16 @@ const SendFeedback = () => {
   const [errorMessage, setErrorMessage] = useState(false);
 
   const placeholder =
-    "border-[1px] border-cream rounded-2xl text-cream light px-[17px] py-[13px] ";
+    "border-[1px] border-cream rounded-2xl text-grayish light px-[17px] py-[13px] ";
 
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     if (data) {
+      const transferred = {
+        ...data,
+      };
+      console.log(transferred);
       dataSender(JSON.stringify(data));
       setIsSend(true);
       setErrorMessage(false);
@@ -55,7 +59,7 @@ const SendFeedback = () => {
           Zostaw swoją opinię
         </p>
         <input
-          className={`${isSend ? "hidden" : "block"} ${placeholder} mb-[15px] input`}
+          className={`${isSend ? "hidden" : "block"} ${placeholder} mb-[15px] `}
           type="text"
           placeholder="Podaj swoje imię i nazwisko"
           {...register("firstName", { required: true, minLength: 3 })}

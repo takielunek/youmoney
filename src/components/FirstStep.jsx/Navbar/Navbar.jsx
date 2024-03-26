@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 const Navbar = () => {
   const { theme } = useContext(ThemeContext);
-  const { amount, day } = useParams();
+  let { amount, period } = useParams();
 
   const spanText =
     "text-[20px] sm:text-[22px] md:text-[25px] text-blue mx-[10px] font-bold";
@@ -28,7 +28,7 @@ const Navbar = () => {
             Aplikujesz o <span className={`${spanText}`}>{amount} zł</span>
           </p>
           <p>
-            na okres <span className={`${spanText}`}>{day} dni</span>
+            na okres <span className={`${spanText}`}>{period} dni</span>
           </p>
         </div>
       </div>

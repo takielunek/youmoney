@@ -35,6 +35,10 @@ const DeleteYourData = () => {
     }
 
     if (formIsValid) {
+         const transferred = {
+           ...data
+         };
+         console.log(transferred);
       dataSender(JSON.stringify(data));
       setShowContent(true);
       reset();
@@ -86,6 +90,7 @@ const DeleteYourData = () => {
                     errors={errors}
                     type={data.type}
                     validation={data.validation}
+                    valueName={data.valueName}
                   />
                 ))}
                 <div>

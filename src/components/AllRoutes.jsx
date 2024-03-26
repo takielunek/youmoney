@@ -15,7 +15,7 @@ const AllRoutes = () => {
       <Route path="/collaboration" element={<Collaboration />} />
       <Route path="/list" element={<ListOfPartners />} />
       <Route path="/data" element={<DeleteYourDataPage />} />
-      <Route path="/step1/:amount/:day" element={<StepOnePage />} />
+      <Route path="/step1/:amount/:period" element={<StepOnePage />} />
       <Route path="/message" element={<MessagePage />} />
     </Routes>
   );

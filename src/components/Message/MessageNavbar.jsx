@@ -7,7 +7,7 @@ const MessageNavbar = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section className="fixed w-full bg-white">
+    <section className={`${theme === "light" ? "bg-darkMode" : "bg-darkMode"} fixed w-full`}>
       <div className="grid place-content-center p-[16px]">
         <a href="/">
           <img

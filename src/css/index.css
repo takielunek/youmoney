@@ -123,22 +123,22 @@ body {
   color: #bbbfc3;
 }
 
-.input {
-  color: black;
-}
-
-.textarea {
-  color: black;
-}
-
 #dark .input {
   color: #bbbfc3;
-  background: #11191f;
+    box-shadow: 0px 1000px #283649 inset;
 }
 
-#dark .input:focus {
-  color: #bbbfc3;
+#dark .input:autofill {
+  box-shadow: 0px 1000px #283649 inset;
+  -webkit-text-fill-color: #bbbfc3;
 }
+
+#light .input:autofill {
+  box-shadow: 0px 1000px #ffffff inset;
+  -webkit-text-fill-color: #415462;
+}
+
+
 
 .MuiSlider-track {
   color: #247bf6;
@@ -201,4 +201,3 @@ body {
 .valid-border {
   border: 2px solid green; /* Valid border color */
 }
-

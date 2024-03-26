@@ -6,12 +6,14 @@ import { useContext } from "react";
 import { ThemeContext } from "./../../App";
 import Input from "./Input.jsx";
 import dataSender from "./../../dataSender.js";
+import { useParams } from "react-router-dom";
 
 const Form = () => {
   const { theme } = useContext(ThemeContext);
 
   const gap = "flex gap-[9px]";
   const input = "border-[2px] rounded-md h-[18px] w-[18px] ";
+  let { amount, period } = useParams();
 
   const {
     register,
@@ -20,11 +22,19 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    if (data && data.checkbox) {
+    if (data && data.term1) {
+      const transferred = {
+        ...data,
+        period,
+        amount,
+      };
+      console.log(transferred);
+
       dataSender(JSON.stringify(data));
-      // window.location.href = "/message";
+      window.location.href = "/message";
     }
   };
+
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
@@ -56,6 +66,7 @@ const Form = () => {
                   errors={errors}
                   type={stepOne.type}
                   validation={stepOne.validation}
+                  valueName={stepOne.valueName}
                 />
               ))}
               {/* checkbox  */}
@@ -67,7 +78,7 @@ const Form = () => {
                   <input
                     type="checkbox"
                     className={`${theme === "light" ? " border-cream bg-transparent" : " border-darkModeBorderColor bg-darkMode "} ${input} `}
-                    {...register("checkbox", { required: true })}
+                    {...register("term1", { required: true })}
                   />
                   {errors.checkbox && (
                     <p role="alert" className="text-red">

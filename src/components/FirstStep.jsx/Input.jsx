@@ -4,8 +4,10 @@ import { useState, useContext } from "react";
 import { ThemeContext } from "./../../App";
 
 // eslint-disable-next-line react/prop-types
-const Input = ({ placeholder, text, speech, message, errors, register, type, validation }) => {
+const Input = ({ placeholder, text, speech, message, errors, register, type, validation,
+}) => {
   const { theme } = useContext(ThemeContext);
+
   const border =
     "relative border-2 rounded-2xl px-[18px] py-[13.5px] focus:outline-none w-full focus:border-blue focus:ring-2 focus:ring-sky ";
   const label = "absolute px-[7px] left-[15px] -translate-y-1/2 rounded-xl";
@@ -25,8 +27,6 @@ const Input = ({ placeholder, text, speech, message, errors, register, type, val
     setHovered(false);
   };
 
-
-
   return (
     <div key={stepOne.id} className="relative z-0">
       <div
@@ -37,7 +37,7 @@ const Input = ({ placeholder, text, speech, message, errors, register, type, val
         >
           {text}
         </label>
-      </div> 
+      </div>
       <input
         type={type}
         id={stepOne.id}
@@ -48,7 +48,6 @@ const Input = ({ placeholder, text, speech, message, errors, register, type, val
           Object.hasOwn(errors, text)
             ? {
                 border: "1px solid red",
-                boxShadow: "none",
               }
             : {}
         }

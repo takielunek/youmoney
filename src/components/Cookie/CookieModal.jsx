@@ -3,7 +3,6 @@ import privacy from "../../assets/pdf/polityka_prywatnosci_findao.pdf";
 import { useState } from "react";
 import CookieAccordion from "./Accordion/CookieAccordion";
 
-
 // eslint-disable-next-line react/prop-types
 const CookieModal = ({ open, onClose }) => {
   if (!open) return null;
@@ -19,7 +18,7 @@ const CookieModal = ({ open, onClose }) => {
   const buttonColors = "bg-cookieButton text-cookieText ";
 
   return (
-    <div>
+    <>
       <div className="absolute z-50 left-[10px] ">
         <div className="fixed bottom-[10px] bg-white py-[15px] px-[20px] w-full sm:w-[435px] rounded-xl buttonShadow">
           <div className="relative">
@@ -38,7 +37,7 @@ const CookieModal = ({ open, onClose }) => {
               />
             </button>
           </div>
-          <div >
+          <div>
             <p className="text-[12px] mt-[40px] mb-[15px] ubuntu-regular text-cookieText">
               Aby zapewnić jak najlepsze wrażenia, korzystamy z technologii,
               takich jak pliki cookie, do przechowywania i/lub uzyskiwania
@@ -82,7 +81,7 @@ const CookieModal = ({ open, onClose }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
