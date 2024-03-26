@@ -1,5 +1,5 @@
 import woman from "../../../assets/MainPage/bg/bg1.png";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import Application from "./Application";
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <section>
       <div className="bg-header">
-        <Navbar />
+       
         <div className="wrapper w-11/12 md:w-10/12 mx-auto">
           <div
             id="header"

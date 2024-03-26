@@ -11,6 +11,7 @@ import LoanButton from "../components/MainPage/Buttons/LoanButton.jsx";
 import "../components/MainPage/Buttons/index.js";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
+import Navbar from "../components/MainPage/Navbar/Navbar.jsx";
 
 const MainPage = () => {
   const sectionsWrapper = "wrapper w-11/12 md:w-10/12 mx-auto ";
@@ -20,6 +21,7 @@ const MainPage = () => {
     <div
       className={`${theme === "light" ? "bg-white" : "bg-darkMode"} relative`}
     >
+      <Navbar />
       <Header />
       <HowItWorks />
       <ThanksTo />

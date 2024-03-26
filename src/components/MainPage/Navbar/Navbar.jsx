@@ -19,17 +19,14 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
     <div
-      className={`${isScrolled ? `scrolled ${theme === `light` ? `bg-white` : `bg-darkMode`} z-50` : " bg-transparent"} navbar fixed  w-full duration-100 }`}
+      className={`${isScrolled ? `scrolled ${theme === `light` ? `bg-white` : `bg-darkMode`}` : " bg-transparent"} navbar fixed  z-50 w-full duration-100 }`}
     >
-      <div className="wrapper mx-auto">
-        <div className="flex justify-between py-[15px]">
+      <div className="wrapper mx-auto ">
+        <div className="flex justify-between py-[15px] ">
           <Logo />
           <NavbarColorButton />
         </div>
