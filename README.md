@@ -4,7 +4,7 @@
 The website was created for the needs of the company youmoney.
 Link to site:
 
-![Website Screenshot]()
+![Website Screenshot](https://github.com/takielunek/youmoney.pl/blob/51f147e3dd50abaceb9f056471f1f2dd507db5e7/screenshot.png)
 
 ## 🛠️ Getting Started
 
