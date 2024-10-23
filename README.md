@@ -1,8 +1,7 @@
 # <p align="center">💲 youmoney</p>
 
 ## 🚀 General info
-The website was created for the needs of the company youmoney.
-Link to site:
+The repository contains a portion of the code for the website developed for Findao sp. z o.o. Please note that only a fragment of the project has been shared here due to confidentiality restrictions and lack of permission to release the full source code.
 
 ![Website Screenshot](https://github.com/takielunek/youmoney.pl/blob/51f147e3dd50abaceb9f056471f1f2dd507db5e7/screenshot.png)
 
